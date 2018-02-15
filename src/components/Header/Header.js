@@ -10,10 +10,10 @@ const Header = () => {
             <header>
                 <h1>Bands <span>in the</span> Backyard</h1>
                     <div>
-                        <NavLink to='/home' className='home nav'>Home</NavLink>
+                        <NavLink to='/home' className='home nav'>HOME</NavLink>
                         <Route exact path='/home' component={Home} />
 
-                        <NavLink to='/artists' className='artists nav'>Artists</NavLink>
+                        <NavLink to='/artists' className='artists nav'>ARTISTS</NavLink>
                         <Route exact path='/artists' component={Artists} />
                     </div>
             </header>

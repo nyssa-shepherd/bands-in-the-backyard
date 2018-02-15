@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,700');
+
 header {
     background-color: #201F22;
     display: flex;
+    font-family: Oswald;
     justify-content: space-between;
     height: 120px;
 }
@@ -8,13 +11,14 @@ header {
 h1 {
     color: #A4E3F2;
     display: inline;
-    padding: 20px;
+    font-size: 40px;
+    padding: 5px 20px;
 }
 
 span {
-    color: #2C666E;  
-    font-weight: 400;
-    font-size: 20px; 
+    color: #fff;  
+    font-weight: 200;
+    font-size: 25px; 
 }
 
 .nav {
@@ -22,10 +26,12 @@ span {
     font-size: 18px;
     margin: 10px;
     position: relative;
+    text-decoration: transparent;
     top: 50px;
 }
 
 .nav:hover {
     color: #A4E3F2; 
+    border-bottom: #A4E3F2 3px solid;
     font-weight: 700px; 
 }
