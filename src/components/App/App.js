@@ -23,11 +23,11 @@ class App extends Component {
 
 export const mapStateToProps = store => ({
   events: store.events
-})
+});
 
 export const mapDispatchToProps = dispatch => ({
   addEvents: event => dispatch(addEvents(event))
-})
+});
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
 

@@ -8,6 +8,6 @@ const fetchApi = async() => {
   } catch (error) {
     throw Error;
   }
-}
+};
 
 export default fetchApi;
