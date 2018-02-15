@@ -6,6 +6,7 @@ const Home = () => {
         <div className='home-page'>
             <h2>UPCOMING NEAR DENVER</h2>
             <h3>Month Name</h3>
+            <hr />
         </div>
     )
 }

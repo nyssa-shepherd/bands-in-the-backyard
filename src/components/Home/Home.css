@@ -16,3 +16,9 @@ h3 {
     right: 450px; 
     position: relative;
 }
+
+hr {
+    right: 450px;
+    position: relative;
+    width: 1350px;
+}
