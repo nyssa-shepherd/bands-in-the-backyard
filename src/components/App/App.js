@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addEvents } from '../../actions/actions.js';
+import { addEvents, fetchApiData } from '../../actions/actions.js';
+import fetchApi from '../apiCall/apiCall.js';
 import Header from '../Header/Header.js';
 import withRouter from 'react-router-dom/withRouter';
 
 class App extends Component {
+
   componentDidMount = async() => {
-    this.props.addEvents();
+    await this.props.fetchApiData();
+    console.log(this.props.events);
   }
+
+
 
   render() {
     return (
@@ -23,7 +28,8 @@ export const mapStateToProps = store => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  addEvents: event => dispatch(addEvents(event))
+  addEvents: event => dispatch(addEvents(event)),
+  fetchApiData: () => dispatch(fetchApiData())
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

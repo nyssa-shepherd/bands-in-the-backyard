@@ -1,11 +1,11 @@
 import fetchApi from '../components/apiCall/apiCall.js';
 
-export const fetchEventData = () => async (dispatch) => {
+export const fetchApiData = () => async (dispatch) => {
   const events = await fetchApi();
-  dispatch(addEvents(events));
+  return dispatch(addEvents(events));
 };
 
-export const addEvents = events => {
+export const addEvents = events => ({
   type: 'ADD_EVENTS',
-  events;
-};
+  events
+});
