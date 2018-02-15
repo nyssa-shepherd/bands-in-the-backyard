@@ -1,21 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { connect } from 'react-redux';
+import { addEvents } from '../../actions/actions.js';
+import Header from '../Header/Header.js';
+import fetchApi from '../apiCall/apiCall.js';
+import withRouter from 'react-router-dom/withRouter';
 
 class App extends Component {
+  componentDidMount = async() => {
+    // const apiData = await fetchApi();
+    // console.log(apiData)
+    // this.props.addEvents(apiData)
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Header />
       </div>
     );
   }
 }
 
-export default App;
+export const mapStateToProps = store => ({
+  events: store.events
+});
+
+export const mapDispatchToProps = dispatch => ({
+  addEvents: event => dispatch(addEvents(event))
+});
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
+
+
