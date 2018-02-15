@@ -1,0 +1,18 @@
+.home-page {
+    position: absolute;
+    left: 35%;
+    top: 120px;
+}
+
+h2 {
+    color: #2C666E;
+    display: block;
+    font-size: 35px;
+    padding-bottom: 45px;
+}
+
+h3 {
+    color: #2C666E;
+    right: 450px; 
+    position: relative;
+}
