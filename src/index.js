@@ -18,5 +18,10 @@ const router = (
   </BrowserRouter>
 );
 
-ReactDOM.render(<Provider store={store}>{router}</Provider>, document.getElementById('root'));
+ReactDOM.render(
+  <Provider store={store}>
+    {router}
+  </Provider>, 
+  document.getElementById('root')
+);
 registerServiceWorker();
