@@ -8,12 +8,14 @@ const Header = () => {
     return (
         <div>
             <header>
-                <h1>Bands in the Backyard</h1>
-                <NavLink to='/home' className='home nav'>Home</NavLink>
-                <Route exact path='/home' component={Home} />
+                <h1>Bands <span>in the</span> Backyard</h1>
+                    <div>
+                        <NavLink to='/home' className='home nav'>Home</NavLink>
+                        <Route exact path='/home' component={Home} />
 
-                <NavLink to='/artists' className='artists nav'>Artists</NavLink>
-                <Route exact path='/artists' component={Artists} />
+                        <NavLink to='/artists' className='artists nav'>Artists</NavLink>
+                        <Route exact path='/artists' component={Artists} />
+                    </div>
             </header>
         </div>
     )

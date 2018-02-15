@@ -1,7 +1,31 @@
+header {
+    background-color: #201F22;
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+}
+
 h1 {
+    color: #A4E3F2;
     display: inline;
+    padding: 20px;
+}
+
+span {
+    color: #2C666E;  
+    font-weight: 400;
+    font-size: 20px; 
 }
 
 .nav {
-    margin: 20px;
+    color: #2C666E;
+    font-size: 18px;
+    margin: 10px;
+    position: relative;
+    top: 50px;
+}
+
+.nav:hover {
+    color: #A4E3F2; 
+    font-weight: 700px; 
 }
