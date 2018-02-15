@@ -1,9 +1,13 @@
 import apiKey from './apiKey.js';
 
 const fetchApi = async() => {
-  const initialFetch = await fetch(`https://rest.bandsintown.com/artists/maroon5/events?app_id=324323`);
-  const data = await initialFetch.json();
-  console.log(data)
+  try {
+    const initialFetch = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&apikey=${apiKey}`);
+    const data = await initialFetch.json();
+    return data._embedded.events;
+  } catch (error) {
+    throw Error;
+  }
 }
 
 export default fetchApi;
