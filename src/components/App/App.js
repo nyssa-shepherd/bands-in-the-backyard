@@ -2,14 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addEvents } from '../../actions/actions.js';
 import Header from '../Header/Header.js';
-import fetchApi from '../apiCall/apiCall.js';
 import withRouter from 'react-router-dom/withRouter';
 
 class App extends Component {
   componentDidMount = async() => {
-    // const apiData = await fetchApi();
-    // console.log(apiData)
-    // this.props.addEvents(apiData)
+    this.props.addEvents();
   }
 
   render() {
