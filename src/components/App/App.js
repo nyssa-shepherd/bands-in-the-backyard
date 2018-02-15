@@ -9,11 +9,8 @@ class App extends Component {
 
   componentDidMount = async() => {
     await this.props.fetchApiData();
-    console.log(this.props.events);
   }
-
-
-
+  
   render() {
     return (
       <div className="App">
