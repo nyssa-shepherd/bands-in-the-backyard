@@ -20,7 +20,7 @@ const cleanData = eventArray => {
       state: event._embedded.venues[0].state.name,
       venue: event._embedded.venues[0].name,
       ticketUrl: event._embedded.venues[0].url
-    }
+    };
   });
   return Promise.all(cleanData);
 };
