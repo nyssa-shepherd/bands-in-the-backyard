@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Card from '../Card/Card.js';
 
 const CardContainer = ({events}) => {
-  const rendered = events.map(event => {
+  const rendered = events.map((event, i) => {
     return <Card 
       name={event.name}
       city={event.city}
@@ -12,9 +12,10 @@ const CardContainer = ({events}) => {
       time={event.time}
       venue={event.venue}
       ticketUrl={event.ticketUrl}
+      key={i}
     />;
   });
-  console.log(rendered)
+  
   return (
     <div>
       {rendered}

@@ -4,12 +4,12 @@ const Card = ({name, city, state, date, time, venue, ticketUrl}) => {
 
   return (
     <div>
-      <h1>{name}</h1>
-      <h2>{city}, {state}</h2>
+      <h1 className='artist-name'>{name}</h1>
+      <h2 className='location-name'>{city}, {state}</h2>
       <p>{date}</p>
       <p>{time}</p>
       <p>{venue}</p>
-      <p>{ticketUrl}</p>
+      <a href='{ticketurl}'>{ticketUrl}</a>
     </div>
   );
 };
