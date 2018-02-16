@@ -9,9 +9,11 @@ import rootReducer from './reducers/rootReducer.js';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk'
 
-const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+const devTools = (
+  window.__REDUX_DEVTOOLS_EXTENSION__ && 
+  window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 const store = createStore(rootReducer, devTools, applyMiddleware(thunk));
-
 const router = (
   <BrowserRouter>
     <App />
