@@ -4,7 +4,8 @@ import Card from '../Card/Card.js';
 
 const CardContainer = ({events}) => {
   const rendered = events.map((event, i) => {
-    return <Card 
+    return <Card
+      image={event.image} 
       name={event.name}
       city={event.city}
       state={event.state}
