@@ -1,3 +1,3 @@
-// const apiKey = 
+const apiKey = 'U4ETwTF4TFZg6APYoRdJsRNYmCCjxRTK';
 
-// export default apiKey;
+export default apiKey;

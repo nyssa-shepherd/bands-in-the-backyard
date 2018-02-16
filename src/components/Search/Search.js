@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { setLocation, addEvents, fetchApiData } from '../../actions/actions.js';
+import { setLocation, fetchApiData } from '../../actions/actions.js';
 import { connect } from 'react-redux';
 
 
@@ -36,13 +36,13 @@ class Search extends Component {
           <button>search</button>
         </form>
       </div>
-    )
+    );
   }
 }
 
 export const mapStateToProps = store => ({
-    events: store.events,
-    location: store.location
+  events: store.events,
+  location: store.location
 });
 
 export const mapDispatchToProps = dispatch => ({
