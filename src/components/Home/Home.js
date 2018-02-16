@@ -1,5 +1,6 @@
 import React from 'react';
 import Search from '../Search/Search.js';
+import CardContainer from '../CardContainer/CardContainer.js';
 import './Home.css';
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
       <h2>UPCOMING NEAR DENVER</h2>
       <h3>Month Name</h3>
       <hr />
+      <CardContainer />
     </div>
   );
 };
