@@ -17,6 +17,8 @@ const cleanData = eventArray => {
     return await {
       name: event.name,
       city: event._embedded.venues[0].city.name,
+      date: event.dates.start.localDate,
+      time: event.dates.start.localTime,
       state: event._embedded.venues[0].state.name,
       venue: event._embedded.venues[0].name,
       ticketUrl: event._embedded.venues[0].url
