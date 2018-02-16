@@ -8,7 +8,7 @@ import withRouter from 'react-router-dom/withRouter';
 class App extends Component {
 
   componentDidMount = async() => {
-    await this.props.fetchApiData();
+    //await this.props.fetchApiData();
   }
   
   render() {
@@ -25,7 +25,7 @@ export const mapStateToProps = store => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  addEvents: event => dispatch(addEvents(event)),
+  //addEvents: event => dispatch(addEvents(event)),
   fetchApiData: () => dispatch(fetchApiData())
 });
 
