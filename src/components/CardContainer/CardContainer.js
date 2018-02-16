@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Card from '../Card/Card.js';
+import './CardContainer.css';
 
 const CardContainer = ({events}) => {
   const rendered = events.map((event, i) => {
@@ -18,7 +19,7 @@ const CardContainer = ({events}) => {
   });
   
   return (
-    <div>
+    <div className='card-container'>
       {rendered}
     </div>
   );
