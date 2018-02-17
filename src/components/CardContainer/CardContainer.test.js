@@ -1,6 +1,5 @@
-import React from 'react';
 import { shallow } from 'enzyme';
-import {CardContainer, mapStateToProps} from './CardContainer.js';
+import {mapStateToProps} from './CardContainer.js';
 
 describe('CardContainer', () => {
 
