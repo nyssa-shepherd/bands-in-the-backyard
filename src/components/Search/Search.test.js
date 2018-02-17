@@ -20,4 +20,12 @@ describe('Search', () => {
     expect(mapped.location).toEqual(mockStore.location);
   });
 
+  it('call dispatch function after MDTP', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+
+    mapped.fetchApiData();
+    expect(mockDispatch).toHaveBeenCalled();
+  });
+
 });
