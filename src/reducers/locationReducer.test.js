@@ -8,4 +8,9 @@ describe('locationReducer', () => {
     expect(locationReducer(undefined, {})).toEqual(expected);
   });
 
+  it('return new state', () => {
+    const expected = 'denver';
+    expect(locationReducer(undefined, actions.setLocation('denver'))).toEqual(expected);
+  });
+
 });
