@@ -3,7 +3,7 @@ import apiKey from './apiKey.js';
 const fetchApi = async(locationKey) => {
   try {
     const initialFetch = await fetch(
-      `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=234&apikey=${apiKey}`
+      `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=264&apikey=${apiKey}`
     );
     const data = await initialFetch.json();
     return cleanData(data._embedded.events);
