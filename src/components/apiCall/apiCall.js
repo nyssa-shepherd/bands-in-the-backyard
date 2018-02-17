@@ -1,6 +1,6 @@
 import apiKey from './apiKey.js';
 
-const fetchApi = async(locationKey) => {
+export const fetchApi = async(locationKey) => {
   try {
     const initialFetch = await fetch(
       `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=264&apikey=${apiKey}`
@@ -12,7 +12,7 @@ const fetchApi = async(locationKey) => {
   }
 };
 
-const cleanData = eventArray => {
+export const cleanData = eventArray => {
   const cleanData =  eventArray.map(async event => {
     return await {
       image: event.images[0].url,
@@ -28,4 +28,4 @@ const cleanData = eventArray => {
   return Promise.all(cleanData);
 };
 
-export default fetchApi;
+
