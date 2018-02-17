@@ -12,3 +12,16 @@ describe('addEvents', () => {
   });
 
 });
+
+describe('setLocation', () => {
+
+  it('return a type of SET_LOCATION with a location', () => {
+    const location = 'Denver';
+    const expected = {
+      type: 'SET_LOCATION',
+      location
+    };
+    expect(expected).toEqual(actions.setLocation(location));
+  });
+
+});

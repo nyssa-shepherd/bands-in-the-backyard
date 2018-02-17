@@ -1,19 +1,29 @@
-import fetchApi from './apiCall.js';
-import jest from 'enzyme';
+import { fetchApi, cleanData } from './apiCall.js';
 
 describe('fetchApi', () => {
 
   it('fetch gets called', () => {
+    const eventArray = [{
+      image: 'url',
+      name: 'name',
+      city: 'city',
+      state: 'state',
+      venue: 'venue',
+      ticketUrl: 'url',
+      uselessData: 'blah'
+    }];
+
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       status: 200,
       json: () => Promise.resolve({
-        results: 'return results'
+        results: eventArray
       })
     }));
 
-    expect(window.fetch).not.toHaveBeenCalled();
-    fetchApi();
-    expect(window.fetch).toBeCalled();
+    expect(cleanData()).not.toHaveBeenCalled();
+    window.fetch;
+   
+    expect(cleanData()).toBeCalledWith(eventArray);
   });
 
   it('should throw the error when catch is hit in the Promise', async () => {

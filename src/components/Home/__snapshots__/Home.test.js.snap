@@ -18,6 +18,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <Connect(Search) />,
         <h2>
           UPCOMING NEAR DENVER
 </h2>,
@@ -25,11 +26,21 @@ ShallowWrapper {
           Month Name
 </h3>,
         <hr />,
+        <Connect(CardContainer) />,
       ],
       "className": "home-page",
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -61,6 +72,15 @@ ShallowWrapper {
         "rendered": null,
         "type": "hr",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -71,6 +91,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <Connect(Search) />,
           <h2>
             UPCOMING NEAR DENVER
 </h2>,
@@ -78,11 +99,21 @@ ShallowWrapper {
             Month Name
 </h3>,
           <hr />,
+          <Connect(CardContainer) />,
         ],
         "className": "home-page",
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         Object {
           "instance": null,
           "key": undefined,
@@ -113,6 +144,15 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": "hr",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
       ],
       "type": "div",
