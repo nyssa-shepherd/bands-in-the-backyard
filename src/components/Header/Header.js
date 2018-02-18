@@ -11,7 +11,7 @@ const Header = () => {
         <h1>Bands <span>in the</span> Backyard</h1>
         <div>
           <NavLink to='/' className='home nav'>HOME</NavLink>
-          <Route path='/' component={Home} />
+          <Route exact path='/' component={Home} />
 
           <NavLink to='/artists' className='artists nav'>ARTISTS</NavLink>
           <Route exact path='/artists' component={Artists} />

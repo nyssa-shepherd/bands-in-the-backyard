@@ -1,4 +1,4 @@
-import fetchApi from '../components/apiCall/apiCall.js';
+import {fetchApi }from '../components/apiCall/apiCall.js';
 
 export const fetchApiData = (locationKey) => async (dispatch) => {
   const events = await fetchApi(locationKey);
