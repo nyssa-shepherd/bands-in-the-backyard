@@ -1,10 +1,10 @@
 import React from 'react';
-import LocationSearch from '../../containers/LocationSearch/LocationSearch';
+import ArtistsSearch from '../../containers/ArtistsSearch/ArtistsSearch';
 
 const Artists = () => {
   return (
     <div>
-      <LocationSearch />
+      <ArtistsSearch />
     </div>
   );
 };

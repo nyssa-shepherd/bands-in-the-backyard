@@ -1,9 +1,9 @@
 import apiKey from './apiKey.js';
 
-export const fetchApi = async(locationKey) => {
+export const fetchEventApi = async(locationKey) => {
   try {
     const initialFetch = await fetch(
-      `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=264&apikey=${apiKey}`
+      `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=${locationKey}&apikey=${apiKey}`
     );
     const data = await initialFetch.json();
     return cleanData(data._embedded.events);
@@ -26,6 +26,16 @@ export const cleanData = eventArray => {
     };
   });
   return Promise.all(cleanData);
+};
+
+export const fetchArtistApi = async(artistName) => {
+  try {
+    const initialFetch = await fetch(`https://rest.bandsintown.com/artists/${artistName}/events?app_id=dasfdfsda`);
+    const data = await initialFetch.json();
+    console.log(data);
+  } catch (err) {
+    throw Error;
+  }
 };
 
 

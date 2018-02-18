@@ -1,26 +1,24 @@
 import React, { Component } from 'react';
-import { setLocation, fetchApiEvents } from '../../actions/actions.js';
+import { setLocation, fetchApiEvents, fetchArtist } from '../../actions/actions.js';
 import { connect } from 'react-redux';
 
 
-class LocationSearch extends Component {
+class ArtistsSearch extends Component {
   constructor () {
     super();
     this.state = {
-      location: ''
+      artist: ''
     };
   }
 
   inputHandler = (e) => {
-    const location = e.target.value;
-    this.setState({location}, () => {
-      this.props.setLocation(this.state.location);
-    });
+    const artist = e.target.value;
+    this.setState({artist});
   }
 
   submitHandler = async(e) => {
     e.preventDefault();
-    await this.props.fetchApiEvents(this.props.location);
+    await this.props.fetchArtist(this.state.artist);
   }
 
   render () {
@@ -30,7 +28,7 @@ class LocationSearch extends Component {
           <input
             onChange={(e) => this.inputHandler(e)} 
             type='text'
-            value={this.state.location}
+            value={this.state.artist}
           />
           <button>search</button>
         </form>
@@ -41,12 +39,14 @@ class LocationSearch extends Component {
 
 export const mapStateToProps = store => ({
   events: store.events,
-  location: store.location
+  location: store.location,
+  artists: store.artists
 });
 
 export const mapDispatchToProps = dispatch => ({
   fetchApiEvents: (locationKey) => dispatch(fetchApiEvents(locationKey)),
-  setLocation: location => dispatch(setLocation(location))
+  setLocation: location => dispatch(setLocation(location)),
+  fetchArtist: artistName => dispatch(fetchArtist(artistName))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(LocationSearch);
+export default connect(mapStateToProps, mapDispatchToProps)(ArtistsSearch);
