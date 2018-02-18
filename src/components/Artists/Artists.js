@@ -1,9 +1,10 @@
 import React from 'react';
+import ArtistsSearch from '../../containers/ArtistsSearch/ArtistsSearch';
 
 const Artists = () => {
   return (
     <div>
-      <h1>Favoritos beyotcho</h1>
+      <ArtistsSearch />
     </div>
   );
 };

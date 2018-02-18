@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { setLocation, fetchApiData } from '../../actions/actions.js';
+import { setLocation, fetchApiEvents } from '../../actions/actions.js';
 import { connect } from 'react-redux';
 
 
-class Search extends Component {
+class LocationSearch extends Component {
   constructor () {
     super();
     this.state = {
@@ -20,8 +20,7 @@ class Search extends Component {
 
   submitHandler = async(e) => {
     e.preventDefault();
-    //const { fetchApiData } = this.props;
-    await this.props.fetchApiData(this.props.location);
+    await this.props.fetchApiEvents(this.props.location);
   }
 
   render () {
@@ -46,8 +45,8 @@ export const mapStateToProps = store => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  fetchApiData: (locationKey) => dispatch(fetchApiData(locationKey)),
+  fetchApiEvents: (locationKey) => dispatch(fetchApiEvents(locationKey)),
   setLocation: location => dispatch(setLocation(location))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export default connect(mapStateToProps, mapDispatchToProps)(LocationSearch);
