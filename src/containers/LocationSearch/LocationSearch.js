@@ -20,7 +20,6 @@ class Search extends Component {
 
   submitHandler = async(e) => {
     e.preventDefault();
-    //const { fetchApiData } = this.props;
     await this.props.fetchApiData(this.props.location);
   }
 

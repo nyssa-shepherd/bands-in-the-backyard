@@ -1,9 +1,10 @@
 import React from 'react';
+import LocationSearch from '../../containers/LocationSearch/LocationSearch';
 
 const Artists = () => {
   return (
     <div>
-      <h1>Favoritos beyotcho</h1>
+      <LocationSearch />
     </div>
   );
 };
