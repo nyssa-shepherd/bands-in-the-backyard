@@ -15,12 +15,13 @@ export const setLocation = location => ({
   location
 });
 
-export const fetchArtist = artistName => async (dispatch) => {
-  const artist = await fetchArtistApi(artistName);
-  return dispatch(addArtist(artist));
+export const fetchArtist = (artistName, location) => async (dispatch) => {
+  const artists = await fetchArtistApi(artistName);
+  return dispatch(addArtist(artists, location));
 };
 
-export const addArtist = artists => ({
+export const addArtist = (artists, location) => ({
   type: 'ADD_ARTIST',
-  artists
+  artists,
+  location
 });

@@ -32,7 +32,7 @@ export const fetchArtistApi = async(artistName) => {
   try {
     const initialFetch = await fetch(`https://rest.bandsintown.com/artists/${artistName}/events?app_id=dasfdfsda`);
     const data = await initialFetch.json();
-    console.log(data);
+    return data;
   } catch (err) {
     throw Error;
   }

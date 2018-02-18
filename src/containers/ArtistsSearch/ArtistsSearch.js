@@ -18,7 +18,9 @@ class ArtistsSearch extends Component {
 
   submitHandler = async(e) => {
     e.preventDefault();
-    await this.props.fetchArtist(this.state.artist);
+    const artistData = await this.props.fetchArtist(this.state.artist, this.props.location);
+    const filtered = artistData.artists.find(artist => artist.venue.city === 'Denver');
+    console.log(filtered);
   }
 
   render () {
