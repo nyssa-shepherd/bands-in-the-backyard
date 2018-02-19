@@ -22,7 +22,9 @@ class LocationSearch extends Component {
   submitHandler = async(e) => {
     e.preventDefault();
     const { location } = this.props;
+
     await this.props.fetchApiEvents(locationObj[location]);
+    this.setState({location: ''});
   }
 
   render () {
