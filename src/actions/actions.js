@@ -20,8 +20,12 @@ export const fetchArtist = (artistName, location) => async (dispatch) => {
   return dispatch(addArtist(artists, location));
 };
 
-export const addArtist = (artists, location) => ({
+export const addArtist = allArtistsEvents => ({
   type: 'ADD_ARTIST',
-  artists,
-  location
+  allArtistsEvents
+});
+
+export const setArtistInLocation = artistInLocation => ({
+  type: 'SET_ARTIST_IN_LOCATION',
+  artistInLocation
 });

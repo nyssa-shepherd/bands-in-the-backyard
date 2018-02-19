@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { setLocation, fetchApiEvents, fetchArtist } from '../../actions/actions.js';
+import { setLocation, fetchApiEvents, fetchArtist, setArtistInLocation } from '../../actions/actions.js';
 import { connect } from 'react-redux';
 
 
@@ -18,9 +18,11 @@ class ArtistsSearch extends Component {
 
   submitHandler = async(e) => {
     e.preventDefault();
-    const artistData = await this.props.fetchArtist(this.state.artist, this.props.location);
-    const filtered = artistData.artists.find(artist => artist.venue.city === 'Denver');
-    console.log(filtered);
+    const artistData = await this.props.fetchArtist(this.state.artist);
+    const splitLocation = this.props.location.split(', ');
+    const filtered = artistData.allArtistsEvents.find(artist => artist.venue.city === splitLocation[0]);
+    
+    this.props.setArtistInLocation(filtered);
   }
 
   render () {
@@ -42,13 +44,15 @@ class ArtistsSearch extends Component {
 export const mapStateToProps = store => ({
   events: store.events,
   location: store.location,
-  artists: store.artists
+  allArtistEvents: store.allArtistsEvents,
+  artistInLocation: store.artistInLocation
 });
 
 export const mapDispatchToProps = dispatch => ({
   fetchApiEvents: (locationKey) => dispatch(fetchApiEvents(locationKey)),
   setLocation: location => dispatch(setLocation(location)),
-  fetchArtist: artistName => dispatch(fetchArtist(artistName))
+  fetchArtist: artistName => dispatch(fetchArtist(artistName)),
+  setArtistInLocation: artist => dispatch(setArtistInLocation(artist))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ArtistsSearch);

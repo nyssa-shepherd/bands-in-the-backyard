@@ -1,8 +1,16 @@
 export const artistReducer = (state = [], action) => {
   switch (action.type) {
   case 'ADD_ARTIST':
-  console.log(action)
-    return [...state, action.artists];
+    return [...state, action.allArtistsEvents];
+  default:
+    return state;
+  }
+};
+
+export const artistInLocationReducer = (state = [], action) => {
+  switch (action.type) {
+  case 'SET_ARTIST_IN_LOCATION':
+    return [...state, action.artistInLocation];
   default:
     return state;
   }
