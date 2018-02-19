@@ -2,7 +2,7 @@ import React from 'react';
 import './Card.css';
 
 const Card = ({name, city, state, date, time, venue, ticketUrl, image}) => {
-
+console.log(name);
   return (
     <div className='card'>
       <img src={image} />
