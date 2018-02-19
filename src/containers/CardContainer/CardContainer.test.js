@@ -1,4 +1,3 @@
-import { shallow } from 'enzyme';
 import {mapStateToProps} from './CardContainer.js';
 
 describe('CardContainer', () => {

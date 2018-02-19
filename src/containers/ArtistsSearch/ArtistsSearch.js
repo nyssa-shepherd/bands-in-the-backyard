@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
-import { setLocation, fetchApiEvents, fetchArtist, setArtistInLocation } from '../../actions/actions.js';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { 
+  setLocation, 
+  fetchApiEvents, 
+  fetchArtist, 
+  setArtistInLocation 
+} from '../../actions/actions.js';
+
 
 
 class ArtistsSearch extends Component {
@@ -20,8 +27,10 @@ class ArtistsSearch extends Component {
     e.preventDefault();
     const artistData = await this.props.fetchArtist(this.state.artist);
     const splitLocation = this.props.location.split(', ');
-    const filtered = artistData.allArtistsEvents.find(artist => artist.venue.city === splitLocation[0]);
-    console.log(filtered);
+    const filtered = artistData.allArtistsEvents.find(
+      artist => artist.venue.city === splitLocation[0]
+    );
+  
     this.props.setArtistInLocation(filtered);
   }
 
@@ -56,3 +65,9 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ArtistsSearch);
+
+ArtistsSearch.propTypes = {
+  fetchArtist: PropTypes.func.isRequired,
+  location: PropTypes.string.isRequired, 
+  setArtistInLocation: PropTypes.func.isRequired
+};

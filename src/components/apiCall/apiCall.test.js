@@ -1,4 +1,4 @@
-import { fetchApi, cleanData } from './apiCall.js';
+import { cleanData } from './apiCall.js';
 
 describe('fetchApi', () => {
 

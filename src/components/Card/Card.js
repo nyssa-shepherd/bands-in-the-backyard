@@ -1,8 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Card.css';
 
 const Card = ({name, city, state, date, time, venue, ticketUrl, image}) => {
-console.log(name);
   return (
     <div className='card'>
       <img src={image} />
@@ -16,3 +16,14 @@ console.log(name);
 };
 
 export default Card;
+
+Card.propTypes = {
+  name: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
+  state: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  time: PropTypes.string.isRequired,
+  venue: PropTypes.string.isRequired,
+  ticketUrl: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired
+};
