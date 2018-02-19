@@ -47,3 +47,25 @@ describe('addArtist', () => {
   });
 
 });
+
+describe('setArtistInLocation', () => {
+
+  it('return a type of SET_ARTIST_IN_LOCATION with artistInLocation', () => {
+    const artist = {
+      name: 'name',
+      city: 'city',
+      state: 'state',
+      date: 'date',
+      venue: 'venue',
+      ticketUrl: 'url'
+    };
+    const artistInLocation = [{artist}];
+    const expected = {
+      type: 'SET_ARTIST_IN_LOCATION',
+      artistInLocation
+    };
+
+    expect(expected).toEqual(actions.setArtistInLocation(artistInLocation));
+  });
+
+});
