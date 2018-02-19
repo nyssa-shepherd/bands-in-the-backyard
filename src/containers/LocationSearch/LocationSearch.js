@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { setLocation, fetchApiEvents } from '../../actions/actions.js';
 import { connect } from 'react-redux';
+import locationObj from '../../locationObject.js';
 
 
 class LocationSearch extends Component {
@@ -20,7 +21,9 @@ class LocationSearch extends Component {
 
   submitHandler = async(e) => {
     e.preventDefault();
-    await this.props.fetchApiEvents(this.props.location);
+    const { location } = this.props;
+    await this.props.fetchApiEvents(locationObj[location]);
+    this.setState({location: ''});
   }
 
   render () {
