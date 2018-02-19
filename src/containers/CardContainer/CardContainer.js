@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
 import Card from '../../components/Card/Card.js';
 import './CardContainer.css';
@@ -7,7 +8,7 @@ import './CardContainer.css';
 class CardContainer extends Component {
   render () {
     let rendered;
-    
+
     this.props.match.path === '/artists' ? 
       rendered = this.props.artistInLocation.map((artist, i) => {
         return <Card
@@ -47,10 +48,10 @@ export const mapStateToProps = store => ({
   artistInLocation: store.artistInLocation
 });
 
-export default connect(mapStateToProps)(CardContainer);
+export default withRouter(connect(mapStateToProps)(CardContainer));
 
 CardContainer.propTypes = {
-  match: PropTypes.string.isRequired,
+  match: PropTypes.object.isRequired,
   artistInLocation: PropTypes.array.isRequired,
   events:  PropTypes.array.isRequired
 };
