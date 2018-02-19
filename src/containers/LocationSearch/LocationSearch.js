@@ -21,8 +21,9 @@ class LocationSearch extends Component {
 
   submitHandler = async(e) => {
     e.preventDefault();
-    console.log(locationObj[this.state.location]);
-    await this.props.fetchApiEvents(this.props.location);
+    const { location } = this.props;
+    await this.props.fetchApiEvents(locationObj[location]);
+    this.setState({location: ''});
   }
 
   render () {
