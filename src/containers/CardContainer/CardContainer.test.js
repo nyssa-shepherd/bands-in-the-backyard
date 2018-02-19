@@ -1,4 +1,4 @@
-import {mapStateToProps} from './CardContainer.js';
+import { mapStateToProps } from './CardContainer.js';
 
 describe('CardContainer', () => {
 

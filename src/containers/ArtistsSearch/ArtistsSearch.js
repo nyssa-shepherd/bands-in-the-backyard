@@ -25,13 +25,24 @@ class ArtistsSearch extends Component {
 
   submitHandler = async(e) => {
     e.preventDefault();
-    const artistData = await this.props.fetchArtist(this.state.artist);
-    const splitLocation = this.props.location.split(', ');
+    const location = this.getFromLocalStorage();
+    const { fetchArtist, setArtistInLocation} = this.props;
+    
+
+  }
+
+  setArtistInStore = async() => {
+    const artistData = await fetchArtist(this.state.artist);
+    const splitLocation = location.split(', ');
     const filtered = artistData.allArtistsEvents.find(
       artist => artist.venue.city === splitLocation[0]
     );
+    setArtistInLocation(filtered);
+  }
   
-    this.props.setArtistInLocation(filtered);
+  getFromLocalStorage = () => {
+    const location = localStorage.getItem('location');
+    return location;
   }
 
   render () {
