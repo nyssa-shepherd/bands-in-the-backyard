@@ -49,7 +49,7 @@ export const mapStateToProps = store => ({
 
 export default connect(mapStateToProps)(CardContainer);
 
-CardContainer.PropTypes = {
+CardContainer.propTypes = {
   match: PropTypes.string.isRequired,
   artistInLocation: PropTypes.array.isRequired,
   events:  PropTypes.array.isRequired
