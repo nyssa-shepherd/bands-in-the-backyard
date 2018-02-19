@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { setLocation, fetchApiEvents } from '../../actions/actions.js';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { setLocation, fetchApiEvents } from '../../actions/actions.js';
 import locationObj from '../../locationObject.js';
 
 
@@ -55,3 +56,8 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LocationSearch);
+
+LocationSearch.propTypes = {
+  setLocation: PropTypes.func.isRequired,
+  fetchApiEvents: PropTypes.func.isRequired
+};

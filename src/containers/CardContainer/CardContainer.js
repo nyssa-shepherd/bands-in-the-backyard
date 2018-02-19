@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Card from '../../components/Card/Card.js';
 import './CardContainer.css';
-import { Route, Redirect } from 'react-router-dom';
-import { withRouter } from 'react-router';
-
-
 
 class CardContainer extends Component {
   render () {
@@ -23,26 +20,26 @@ class CardContainer extends Component {
           key={i}
         />;
       })
-     : rendered = this.props.events.map((event, i) => {
-      return <Card
-        image={event.image} 
-        name={event.name}
-        city={event.city}
-        state={event.state}
-        date={event.date}
-        time={event.time}
-        venue={event.venue}
-        ticketUrl={event.ticketUrl}
-        key={i}
-      />;
-    });
-    
+      : rendered = this.props.events.map((event, i) => {
+        return <Card
+          image={event.image} 
+          name={event.name}
+          city={event.city}
+          state={event.state}
+          date={event.date}
+          time={event.time}
+          venue={event.venue}
+          ticketUrl={event.ticketUrl}
+          key={i}
+        />;
+      });
+
     return (  
       <div className='card-container'>
         {rendered}
       </div>
     );
-  };
+  }
 }
 
 export const mapStateToProps = store => ({
@@ -50,4 +47,10 @@ export const mapStateToProps = store => ({
   artistInLocation: store.artistInLocation
 });
 
-export default withRouter(connect(mapStateToProps)(CardContainer));
+export default connect(mapStateToProps)(CardContainer);
+
+CardContainer.PropTypes = {
+  match: PropTypes.string.isRequired,
+  artistInLocation: PropTypes.array.isRequired,
+  events:  PropTypes.array.isRequired
+};
