@@ -8,8 +8,6 @@ import {
   setArtistInLocation 
 } from '../../actions/actions.js';
 
-
-
 class ArtistsSearch extends Component {
   constructor () {
     super();
@@ -29,6 +27,7 @@ class ArtistsSearch extends Component {
     const splitLocation = location.split(', ');
 
     this.sendArtistToStore(splitLocation);
+    this.setState({artist: ''});
   }
 
   sendArtistToStore = async(splitLocation) => {
@@ -37,7 +36,7 @@ class ArtistsSearch extends Component {
     const filtered = artistData.allArtistsEvents.find(
       artist => artist.venue.city === splitLocation[0]
     );
-    
+
     setArtistInLocation(filtered);
   }
   

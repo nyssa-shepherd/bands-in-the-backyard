@@ -12,12 +12,12 @@ class CardContainer extends Component {
     this.props.match.path === '/artists' ? 
       rendered = this.props.artistInLocation.map((artist, i) => {
         return <Card
-          name={artist.lineup[0]}
-          city={artist.venue.city}
+          name={artist.name}
+          city={artist.city}
           state={artist.venue.region}
-          date={artist.datetime}
-          venue={artist.venue.name}
-          ticketUrl={artist.offers[0].url}
+          date={artist.date}
+          venue={artist.venue}
+          ticketUrl={artist.ticketUrl}
           key={i}
         />;
       })

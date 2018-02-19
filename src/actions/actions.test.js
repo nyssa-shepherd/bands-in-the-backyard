@@ -23,5 +23,5 @@ describe('setLocation', () => {
     };
     expect(expected).toEqual(actions.setLocation(location));
   });
-
+  
 });

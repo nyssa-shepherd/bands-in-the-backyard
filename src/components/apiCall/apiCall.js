@@ -32,10 +32,24 @@ export const fetchArtistApi = async(artistName) => {
   try {
     const initialFetch = await fetch(`https://rest.bandsintown.com/artists/${artistName}/events?app_id=dasfdfsda`);
     const data = await initialFetch.json();
-    return data;
+    return cleanArtistData(data);
   } catch (err) {
     throw Error;
   }
+};
+
+export const cleanArtistData = artistArray => {
+  const cleanData = artistArray.map(async artist => {
+    return await {
+      name: artist.lineup[0],
+      city: artist.venue.city,
+      state: artist.venue.region,
+      date: artist.datetime,
+      venue: artist.venue.name,
+      ticketUrl: artist.offers[0].url
+    };
+  });
+  return Promise.all(cleanData);
 };
 
 
