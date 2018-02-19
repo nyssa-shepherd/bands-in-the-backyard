@@ -23,5 +23,27 @@ describe('setLocation', () => {
     };
     expect(expected).toEqual(actions.setLocation(location));
   });
-  
+
+});
+
+describe('addArtist', () => {
+
+  it('return a type of ADD_ARTIST with allArtistsEvents', () => {
+    const artist = {
+      name: 'name',
+      city: 'city',
+      state: 'state',
+      date: 'date',
+      venue: 'venue',
+      ticketUrl: 'url'
+    };
+    const allArtistsEvents = [{artist}];
+    const expected = {
+      type: 'ADD_ARTIST',
+      allArtistsEvents
+    };
+
+    expect(expected).toEqual(actions.addArtist(allArtistsEvents));
+  });
+
 });
