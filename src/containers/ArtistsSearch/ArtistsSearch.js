@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import './ArtistsSearch.css';
 import { 
   setLocation, 
   fetchApiEvents, 
@@ -48,7 +49,7 @@ class ArtistsSearch extends Component {
   render () {
     return (
       <div>
-        <form onSubmit={(e) => this.submitHandler(e)}>
+        <form className='artist-form' onSubmit={(e) => this.submitHandler(e)}>
           <input
             onChange={(e) => this.inputHandler(e)} 
             type='text'

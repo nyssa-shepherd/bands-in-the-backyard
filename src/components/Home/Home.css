@@ -2,6 +2,7 @@
     position: absolute;
     left: 35%;
     top: 180px;
+    width: fit-content;
 }
 
 h2 {
@@ -22,7 +23,33 @@ hr {
     width: 1350px;
 }
 
+form {
+    display: flex;
+    align-content: center;
+    width: 450px;
+}
+
 input {
-    margin: 0 auto;
-    width: 300px;
+    height: 20px;
+    margin-right: 5px;
+    width: 85%;
+}
+
+input::placeholder {
+    font-size: 18px;
+}
+
+button {
+    background-color: #658f94; 
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    height: 25px;
+    padding: 5px;
+    width: 55px;
+}
+
+button:hover {
+    background-color: #A4E3F2; 
+
 }

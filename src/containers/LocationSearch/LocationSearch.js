@@ -43,6 +43,7 @@ export class LocationSearch extends Component {
           <input
             onChange={(e) => this.inputHandler(e)} 
             type='text'
+            placeholder='Enter a location'
             value={this.state.location}
           />
           <button>search</button>
