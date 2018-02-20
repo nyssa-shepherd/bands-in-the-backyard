@@ -23,5 +23,6 @@ hr {
 }
 
 input {
-    width: 60px;
+    margin: 0 auto;
+    width: 300px;
 }
