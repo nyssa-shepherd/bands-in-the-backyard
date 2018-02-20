@@ -2,7 +2,7 @@
 
 header {
     background-image: url('../../images/concert.jpg');
-    background-position: bottom;
+    background-position: center;
     background-size: 60%;
      /* background-repeat: no-repeat;  */
     display: flex;
@@ -27,7 +27,7 @@ span {
 
 .nav {
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
     margin: 10px;
     position: relative;
     right: 20px;
@@ -36,13 +36,11 @@ span {
 }
 
 .nav:hover {
-    color: #A4E3F2; 
-    border-bottom: #A4E3F2 3px solid;
+    border-bottom: #fff 3px solid;
     font-weight: 700px; 
 }
 
 .active {
-    color: #A4E3F2; 
-    border-bottom: #A4E3F2 3px solid;
+    border-bottom: #fff 3px solid;
     font-weight: 700px; 
 }
