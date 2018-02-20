@@ -13,7 +13,8 @@ export class ArtistsSearch extends Component {
   constructor () {
     super();
     this.state = {
-      artist: ''
+      artist: '',
+      favArtists: []
     };
   }
 
@@ -38,7 +39,9 @@ export class ArtistsSearch extends Component {
       artist => artist.city === splitLocation[0]
     );
 
-    setArtistInLocation(filtered);
+    const { artistInLocation } = setArtistInLocation(filtered);
+    this.setState({favArtists: [...this.state.favArtists, artistInLocation]});
+    localStorage.setItem('favArtists', JSON.stringify(this.state.favArtists))
   }
   
   getFromLocalStorage = () => {
