@@ -1,17 +1,24 @@
 .card {
-  border: solid black 2px;
+  border: 1px solid black;
   height: 440px;
   margin: 10px;
   width: 300px;
 }
 
+.card-text {
+  padding: 20px;
+}
+
 .artist-name {
-  color: #658f94;
-  font-size: 20px;
+  color: #a52e1e;
+  font-size: 18px;
+  text-align: justify;
+
 }
 
 .location-name {
-  font-size: 17px;
+  color: #a52e1eb0;
+  font-size: 15px;
   padding-bottom: 0;
 }
 
@@ -19,3 +26,14 @@ img {
   height: 150px;
   width: 300px;
 }
+
+p {
+  color:#111;
+}
+
+a {
+  color: #111;
+  font-size: 12px;
+  text-align: justify;
+}
+

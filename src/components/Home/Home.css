@@ -6,19 +6,19 @@
 }
 
 h2 {
-    color: #2C666E;
+    color: #3e0c09;
     display: block;
     font-size: 35px;
 }
 
 h3 {
-    color: #2C666E;
+    color: #3e0c09;
     right: 450px; 
     position: relative;
 }
 
 hr {
-    right: 450px;
+    right: 490px;
     position: relative;
     width: 1350px;
 }
@@ -26,7 +26,7 @@ hr {
 form {
     display: flex;
     align-content: center;
-    width: 450px;
+    width: 390px;
 }
 
 input {
@@ -40,7 +40,7 @@ input::placeholder {
 }
 
 button {
-    background-color: #658f94; 
+    background-color: #3e0c09; 
     border: none;
     color: #fff;
     font-size: 15px;
@@ -50,6 +50,6 @@ button {
 }
 
 button:hover {
-    background-color: #A4E3F2; 
+    background-color: #a52e1eb0; 
 
 }

@@ -53,6 +53,7 @@ class ArtistsSearch extends Component {
           <input
             onChange={(e) => this.inputHandler(e)} 
             type='text'
+            placeholder='Enter an artist'
             value={this.state.artist}
           />
           <button>search</button>
