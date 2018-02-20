@@ -1,11 +1,18 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import {LocationSearch, mapStateToProps, mapDispatchToProps} from './LocationSearch.js';
+import {
+  LocationSearch, 
+  mapStateToProps, 
+  mapDispatchToProps} from './LocationSearch.js';
 
 describe('Search', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<LocationSearch />);
+  });
 
   it('default state of location is empty string', () => {
-    const wrapper = shallow(<LocationSearch />);
     expect(wrapper.state().location).toEqual('');
   });
 

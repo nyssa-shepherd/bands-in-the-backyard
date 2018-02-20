@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Card from '../../components/Card/Card.js';
 import './CardContainer.css';
 
-class CardContainer extends Component {
+export class CardContainer extends Component {
   render () {
     let rendered;
 
@@ -51,7 +51,7 @@ export const mapStateToProps = store => ({
 export default withRouter(connect(mapStateToProps)(CardContainer));
 
 CardContainer.propTypes = {
-  match: PropTypes.object.isRequired,
-  artistInLocation: PropTypes.array.isRequired,
-  events:  PropTypes.array.isRequired
+  match: PropTypes.object,
+  artistInLocation: PropTypes.array,
+  events:  PropTypes.array
 };
