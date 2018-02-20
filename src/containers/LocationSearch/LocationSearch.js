@@ -5,7 +5,7 @@ import { setLocation, fetchApiEvents } from '../../actions/actions.js';
 import locationObj from '../../locationObject.js';
 
 
-class LocationSearch extends Component {
+export class LocationSearch extends Component {
   constructor () {
     super();
     this.state = {
@@ -58,6 +58,6 @@ export const mapDispatchToProps = dispatch => ({
 export default connect(mapStateToProps, mapDispatchToProps)(LocationSearch);
 
 LocationSearch.propTypes = {
-  setLocation: PropTypes.func.isRequired,
-  fetchApiEvents: PropTypes.func.isRequired
+  setLocation: PropTypes.func,
+  fetchApiEvents: PropTypes.func
 };

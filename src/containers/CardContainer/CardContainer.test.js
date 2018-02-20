@@ -1,6 +1,19 @@
-import { mapStateToProps } from './CardContainer.js';
+import React from 'react';
+import { shallow } from 'enzyme';
+import { 
+  mapStateToProps, 
+  CardContainer } from './CardContainer.js';
 
 describe('CardContainer', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<CardContainer />);
+  });
+
+  it('snapshot test', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it('map the store correctly', () => {
     const event1 = {
