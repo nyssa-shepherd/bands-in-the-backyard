@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,700');
 
 header {
-    background-color: #201F22;
+    background-image: url('../../images/concert.jpg');
+    background-position: bottom;
+    background-size: 60%;
+     /* background-repeat: no-repeat;  */
     display: flex;
     font-family: Oswald;
     justify-content: space-between;
-    height: 120px;
+    height: 150px;
+    width: 100%;
 }
 
 h1 {

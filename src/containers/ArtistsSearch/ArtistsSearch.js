@@ -34,7 +34,7 @@ class ArtistsSearch extends Component {
     const { fetchArtist, setArtistInLocation} = this.props;
     const artistData = await fetchArtist(this.state.artist);
     const filtered = artistData.allArtistsEvents.find(
-      artist => artist.venue.city === splitLocation[0]
+      artist => artist.city === splitLocation[0]
     );
 
     setArtistInLocation(filtered);
