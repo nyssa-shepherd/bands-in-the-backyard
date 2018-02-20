@@ -9,7 +9,7 @@ import {
   setArtistInLocation 
 } from '../../actions/actions.js';
 
-class ArtistsSearch extends Component {
+export class ArtistsSearch extends Component {
   constructor () {
     super();
     this.state = {
@@ -80,7 +80,7 @@ export const mapDispatchToProps = dispatch => ({
 export default connect(mapStateToProps, mapDispatchToProps)(ArtistsSearch);
 
 ArtistsSearch.propTypes = {
-  fetchArtist: PropTypes.func.isRequired,
-  location: PropTypes.string.isRequired, 
-  setArtistInLocation: PropTypes.func.isRequired
+  fetchArtist: PropTypes.func,
+  location: PropTypes.string, 
+  setArtistInLocation: PropTypes.func
 };
