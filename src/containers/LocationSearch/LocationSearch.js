@@ -13,6 +13,13 @@ export class LocationSearch extends Component {
     };
   }
 
+  componentDidMount = async() => {
+    const { fetchApiEvents } = this.props;
+    const location = localStorage.getItem('location');
+    
+    localStorage ?  await fetchApiEvents(locationObj[location]) : null;
+  }
+
   inputHandler = (e) => {
     const location = e.target.value;
     this.setState({location}, () => {
@@ -23,7 +30,7 @@ export class LocationSearch extends Component {
   submitHandler = async(e) => {
     e.preventDefault();
     const { location } = this.props;
-
+    
     await this.props.fetchApiEvents(locationObj[location]);
     localStorage.setItem('location', location);
     this.setState({location: ''});
