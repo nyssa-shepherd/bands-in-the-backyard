@@ -13,18 +13,25 @@ export class LocationSearch extends Component {
     };
   }
 
+  componentDidMount = async() => {
+    const { fetchApiEvents } = this.props;
+    const location = localStorage.getItem('location');
+
+    localStorage ?  await fetchApiEvents(locationObj[location]) : null;
+  }
+
   inputHandler = (e) => {
     const location = e.target.value;
-    this.setState({location}, () => {
+    this.setState({ location }, () => {
       this.props.setLocation(this.state.location);
     });
   }
 
   submitHandler = async(e) => {
     e.preventDefault();
-    const { location } = this.props;
-
-    await this.props.fetchApiEvents(locationObj[location]);
+    const { location, fetchApiEvents } = this.props;
+    
+    await fetchApiEvents(locationObj[location]);
     localStorage.setItem('location', location);
     this.setState({location: ''});
   }
@@ -36,6 +43,7 @@ export class LocationSearch extends Component {
           <input
             onChange={(e) => this.inputHandler(e)} 
             type='text'
+            placeholder='Enter a location'
             value={this.state.location}
           />
           <button>search</button>

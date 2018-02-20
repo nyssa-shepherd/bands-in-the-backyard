@@ -10,8 +10,17 @@ const Header = () => {
       <header>
         <h1>Bands <span>in the</span> Backyard</h1>
         <div>
-          <NavLink to='/' className='home nav'>HOME</NavLink>
-          <NavLink to='/artists' className='artists nav'>ARTISTS</NavLink>
+          <NavLink to='/' 
+            activeClassName='active'
+            className='home nav'>
+            HOME
+          </NavLink>
+          <NavLink 
+            activeClassName='active'
+            to='/artists' 
+            className='artists nav'>
+              ARTISTS
+          </NavLink>
         </div>
       </header>
       <div>

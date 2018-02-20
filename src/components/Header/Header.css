@@ -1,18 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,700');
 
 header {
-    background-color: #201F22;
+    background-image: url('../../images/concert.jpg');
+    background-position: bottom;
+    background-size: 60%;
+     /* background-repeat: no-repeat;  */
     display: flex;
     font-family: Oswald;
     justify-content: space-between;
-    height: 120px;
+    height: 150px;
+    width: 100%;
 }
 
 h1 {
-    color: #A4E3F2;
+    color: #fff;
     display: inline;
-    font-size: 40px;
-    padding: 5px 20px;
+    font-size: 45px;
+    padding: 35px 0 0 20px;
 }
 
 span {
@@ -22,15 +26,22 @@ span {
 }
 
 .nav {
-    color: #2C666E;
+    color: #fff;
     font-size: 18px;
     margin: 10px;
     position: relative;
+    right: 20px;
     text-decoration: transparent;
-    top: 50px;
+    top: 90px;
 }
 
 .nav:hover {
+    color: #A4E3F2; 
+    border-bottom: #A4E3F2 3px solid;
+    font-weight: 700px; 
+}
+
+.active {
     color: #A4E3F2; 
     border-bottom: #A4E3F2 3px solid;
     font-weight: 700px; 

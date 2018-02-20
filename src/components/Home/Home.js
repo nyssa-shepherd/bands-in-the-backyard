@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className='home-page'>
       <LocationSearch />
-      <h2>UPCOMING NEAR DENVER</h2>
+      <h2>UPCOMING NEAR YOU</h2>
       <h3>Month Name</h3>
       <hr />
       <CardContainer />

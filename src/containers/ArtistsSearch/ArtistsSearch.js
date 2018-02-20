@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import './ArtistsSearch.css';
 import { 
   setLocation, 
   fetchApiEvents, 
@@ -34,7 +35,7 @@ class ArtistsSearch extends Component {
     const { fetchArtist, setArtistInLocation} = this.props;
     const artistData = await fetchArtist(this.state.artist);
     const filtered = artistData.allArtistsEvents.find(
-      artist => artist.venue.city === splitLocation[0]
+      artist => artist.city === splitLocation[0]
     );
 
     setArtistInLocation(filtered);
@@ -48,7 +49,7 @@ class ArtistsSearch extends Component {
   render () {
     return (
       <div>
-        <form onSubmit={(e) => this.submitHandler(e)}>
+        <form className='artist-form' onSubmit={(e) => this.submitHandler(e)}>
           <input
             onChange={(e) => this.inputHandler(e)} 
             type='text'

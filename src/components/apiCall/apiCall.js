@@ -45,8 +45,8 @@ export const cleanArtistData = artistArray => {
       city: artist.venue.city,
       state: artist.venue.region,
       date: artist.datetime,
-      venue: artist.venue.name,
-      ticketUrl: artist.offers[0].url
+      venue: artist.venue.name
+      //ticketUrl: artist.offers[0].url
     };
   });
   return Promise.all(cleanData);
