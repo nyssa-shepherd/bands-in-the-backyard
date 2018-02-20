@@ -1,6 +1,13 @@
-import {mapStateToProps, mapDispatchToProps} from './Search.js';
+import React from 'react';
+import { shallow } from 'enzyme';
+import {LocationSearch, mapStateToProps, mapDispatchToProps} from './LocationSearch.js';
 
 describe('Search', () => {
+
+  it('default state of location is empty string', () => {
+    const wrapper = shallow(<LocationSearch />);
+    expect(wrapper.state().location).toEqual('');
+  });
 
   it('map the store correctly', () => {
     const event1 = {
@@ -24,7 +31,7 @@ describe('Search', () => {
     const mockDispatch = jest.fn();
     const mapped = mapDispatchToProps(mockDispatch);
 
-    mapped.fetchApiData();
+    mapped.fetchApiEvents();
     expect(mockDispatch).toHaveBeenCalled();
   });
 
