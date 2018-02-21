@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
-import { setLocation, fetchApiEvents } from '../../actions/actions.js';
+import { setLocation, fetchApiEvents, fetchArtist, setArtistInLocation } from '../../actions/actions.js';
 import locationObj from '../../locationObject.js';
 
 
@@ -9,31 +10,70 @@ export class LocationSearch extends Component {
   constructor () {
     super();
     this.state = {
-      location: ''
+      inputVal: '',
+      artist: '',
+      favArtists: []
     };
   }
 
   componentDidMount = async() => {
-    const { fetchApiEvents } = this.props;
+    const { fetchApiEvents, setLocation } = this.props;
     const location = localStorage.getItem('location');
 
-    localStorage ?  await fetchApiEvents(locationObj[location]) : null;
+    localStorage.location ?  
+      await fetchApiEvents(locationObj[location]) && setLocation(location)
+      : null;
   }
 
   inputHandler = (e) => {
-    const location = e.target.value;
-    this.setState({ location }, () => {
-      this.props.setLocation(this.state.location);
-    });
+    const inputVal = e.target.value;
+    const { match, setLocation } = this.props;
+
+    this.setState({inputVal});
+    match.path === '/artists' ? 
+      this.setState({artist: inputVal}) : setLocation(inputVal);
   }
 
   submitHandler = async(e) => {
     e.preventDefault();
-    const { location, fetchApiEvents } = this.props;
+    await this.callFetch();
     
-    await fetchApiEvents(locationObj[location]);
-    localStorage.setItem('location', location);
-    this.setState({location: ''});
+    this.props.match.path === '/artists' ? await this.setFavoriteArtists() : null;
+    this.setLocalStorage();
+    this.setState({inputVal: ''});
+  }
+
+
+  callFetch = async() => {
+    const { artist } = this.state;
+    const { location, fetchApiEvents, fetchArtist, match } = this.props;
+    
+    return match.path === '/' ?
+      await fetchApiEvents(locationObj[location]) : await fetchArtist(artist);
+  
+  }
+
+  setFavoriteArtists = async() => {
+    const { favArtists } = this.state;
+    const { location, allArtistEvents } = this.props;
+    const splitLocation = location.split(', ');
+    
+    let matchLocation = allArtistEvents.find(artist => {
+      return artist.state === splitLocation[1];
+    });
+
+    this.setState({favArtists: [...favArtists, matchLocation]});  
+    console.log(this.state.favArtists);
+  }
+
+  setLocalStorage = () => {
+    const { favArtists } = this.state;
+    const { location, allArtistEvents } = this.props;
+
+    this.props.match.path === '/' ?
+      localStorage.setItem('location', location)
+      :
+      localStorage.setItem('favArtists', favArtists);
   }
 
   render () {
@@ -44,7 +84,7 @@ export class LocationSearch extends Component {
             onChange={(e) => this.inputHandler(e)} 
             type='text'
             placeholder='Enter a location'
-            value={this.state.location}
+            value={this.state.inputVal}
           />
           <button>search</button>
         </form>
@@ -55,15 +95,19 @@ export class LocationSearch extends Component {
 
 export const mapStateToProps = store => ({
   events: store.events,
-  location: store.location
+  location: store.location,
+  allArtistEvents: store.allArtistEvents,
+  artistInLocation: store.artistInLocation
 });
 
 export const mapDispatchToProps = dispatch => ({
   fetchApiEvents: (locationKey) => dispatch(fetchApiEvents(locationKey)),
-  setLocation: location => dispatch(setLocation(location))
+  setLocation: location => dispatch(setLocation(location)),
+  fetchArtist: artistName => dispatch(fetchArtist(artistName)),
+  setArtistInLocation: artist => dispatch(setArtistInLocation(artist))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(LocationSearch);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LocationSearch));
 
 LocationSearch.propTypes = {
   setLocation: PropTypes.func,
