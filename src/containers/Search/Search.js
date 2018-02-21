@@ -20,12 +20,15 @@ export class Search extends Component {
   }
 
   componentDidMount = async() => {
-    const { fetchApiEvents, setLocation } = this.props;
+    const { fetchApiEvents, setLocation, setArtistInLocation} = this.props;
     const location = localStorage.getItem('location');
+    const favArtists = localStorage.getItem('favArtists');
 
     localStorage.location ?  
       await fetchApiEvents(locationObj[location]) && setLocation(location)
       : null;
+  
+    localStorage.favArtists ? await setArtistInLocation(JSON.parse(favArtists)) : null;  
   }
 
   inputHandler = (e) => {
@@ -46,7 +49,6 @@ export class Search extends Component {
     this.setLocalStorage();
     this.setState({inputVal: ''});
   }
-
 
   callFetch = async() => {
     const { inputVal } = this.state;
@@ -83,7 +85,6 @@ export class Search extends Component {
 }
 
 export const mapStateToProps = store => ({
-  events: store.events,
   location: store.location,
   allArtistEvents: store.allArtistEvents,
   artistInLocation: store.artistInLocation
@@ -99,7 +100,6 @@ export const mapDispatchToProps = dispatch => ({
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Search));
 
 Search.propTypes = {
-  events: PropTypes.string,
   location: PropTypes.string,
   allArtistEvents: PropTypes.array,
   artistInLocation: PropTypes.array,
