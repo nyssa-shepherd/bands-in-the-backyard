@@ -57,13 +57,12 @@ export class LocationSearch extends Component {
     const { favArtists } = this.state;
     const { location, allArtistEvents } = this.props;
     const splitLocation = location.split(', ');
-    
-    let matchLocation = allArtistEvents.find(artist => {
+
+    let matchLocation = await allArtistEvents.filter(artist => {
       return artist.state === splitLocation[1];
     });
-
-    this.setState({favArtists: [...favArtists, matchLocation]});  
-    console.log(this.state.favArtists);
+ 
+    this.setState({favArtists: [...favArtists, matchLocation]}); 
   }
 
   setLocalStorage = () => {
