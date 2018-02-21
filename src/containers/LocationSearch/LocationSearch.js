@@ -36,9 +36,10 @@ export class LocationSearch extends Component {
 
   submitHandler = async(e) => {
     e.preventDefault();
+    const { path } = this.props.match;
     await this.callFetch();
     
-    this.props.match.path === '/artists' ? await this.setFavoriteArtists() : null;
+    path === '/artists' ? await this.setFavoriteArtists() : null;
     this.setLocalStorage();
     this.setState({inputVal: ''});
   }
@@ -50,29 +51,30 @@ export class LocationSearch extends Component {
     
     return match.path === '/' ?
       await fetchApiEvents(locationObj[location]) : await fetchArtist(artist);
-  
   }
 
   setFavoriteArtists = async() => {
     const { favArtists } = this.state;
-    const { location, allArtistEvents } = this.props;
+    const { location, allArtistEvents, setArtistInLocation } = this.props;
     const splitLocation = location.split(', ');
 
     let matchLocation = await allArtistEvents.filter(artist => {
       return artist.state === splitLocation[1];
     });
  
-    this.setState({favArtists: [...favArtists, matchLocation]}); 
+    this.setState({favArtists: matchLocation}, () => {
+      setArtistInLocation(matchLocation);
+    }); 
   }
 
   setLocalStorage = () => {
     const { favArtists } = this.state;
-    const { location, allArtistEvents } = this.props;
-
-    this.props.match.path === '/' ?
+    const { location, allArtistEvents, match, artistInLocation } = this.props;
+    
+    match.path === '/' ?
       localStorage.setItem('location', location)
       :
-      localStorage.setItem('favArtists', favArtists);
+      localStorage.setItem('favArtists', JSON.stringify(artistInLocation));
   }
 
   render () {

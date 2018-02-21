@@ -14,7 +14,7 @@ export class CardContainer extends Component {
         return <Card
           name={artist.name}
           city={artist.city}
-          state={artist.venue.region}
+          state={artist.state}
           date={artist.date}
           venue={artist.venue}
           ticketUrl={artist.ticketUrl}

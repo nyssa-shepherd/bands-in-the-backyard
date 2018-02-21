@@ -41,6 +41,7 @@ export const fetchArtistApi = async(artistName) => {
 export const cleanArtistData = artistArray => {
   const cleanData = artistArray.map(async artist => {
     return await {
+      id: artist.id,
       name: artist.lineup[0],
       city: artist.venue.city,
       state: artist.venue.region,
