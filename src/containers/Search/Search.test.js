@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import {
   LocationSearch, 
   mapStateToProps, 
-  mapDispatchToProps} from './LocationSearch.js';
+  mapDispatchToProps} from './Search.js';
 
 describe('Search', () => {
   let wrapper;

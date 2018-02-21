@@ -8,7 +8,7 @@ import './CardContainer.css';
 export class CardContainer extends Component {
   render () {
     let rendered;
-    console.log(this.props.artistInLocation)
+    
     this.props.match.path === '/artists' ? 
       rendered = this.props.artistInLocation.map((artist, i) => {
         return <Card

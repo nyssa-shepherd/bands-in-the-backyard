@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
-import { setLocation, fetchApiEvents, fetchArtist, setArtistInLocation } from '../../actions/actions.js';
+import { 
+  setLocation, 
+  fetchApiEvents, 
+  fetchArtist, 
+  setArtistInLocation } from '../../actions/actions.js';
 import locationObj from '../../locationObject.js';
 
 
-export class LocationSearch extends Component {
+export class Search extends Component {
   constructor () {
     super();
     this.state = {
@@ -53,7 +57,6 @@ export class LocationSearch extends Component {
   }
 
   setFavoriteArtists = async() => {
-    const { favArtists } = this.state;
     const { location, allArtistEvents, setArtistInLocation } = this.props;
     const splitLocation = location.split(', ');
 
@@ -61,14 +64,11 @@ export class LocationSearch extends Component {
       return artist.state === splitLocation[1];
     });
  
-    
-      setArtistInLocation(matchLocation);
- 
+    setArtistInLocation(matchLocation);
   }
 
   setLocalStorage = () => {
-    const { favArtists } = this.state;
-    const { location, allArtistEvents, match, artistInLocation } = this.props;
+    const { location, match, artistInLocation } = this.props;
     
     match.path === '/' ?
       localStorage.setItem('location', location)
@@ -107,9 +107,16 @@ export const mapDispatchToProps = dispatch => ({
   setArtistInLocation: artist => dispatch(setArtistInLocation(artist))
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LocationSearch));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Search));
 
-LocationSearch.propTypes = {
+Search.propTypes = {
+  events: PropTypes.string,
+  location: PropTypes.string,
+  allArtistEvents: PropTypes.array,
+  artistInLocation: PropTypes.array,
   setLocation: PropTypes.func,
-  fetchApiEvents: PropTypes.func
+  fetchApiEvents: PropTypes.func,
+  fetchArtist: PropTypes.func,
+  setArtistInLocation: PropTypes.func,
+  match: PropTypes.object
 };

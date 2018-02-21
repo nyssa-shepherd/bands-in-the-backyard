@@ -1,11 +1,11 @@
 import React from 'react';
-import LocationSearch from '../../containers/LocationSearch/LocationSearch.js';
+import Search from '../../containers/Search/Search.js';
 import CardContainer from '../../containers/CardContainer/CardContainer.js';
 
 const Artists = () => {
   return (
     <div>
-      <LocationSearch />
+      <Search />
       <CardContainer />
     </div>
   );
