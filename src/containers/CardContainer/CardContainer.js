@@ -8,13 +8,13 @@ import './CardContainer.css';
 export class CardContainer extends Component {
   render () {
     let rendered;
-
+    
     this.props.match.path === '/artists' ? 
       rendered = this.props.artistInLocation.map((artist, i) => {
         return <Card
           name={artist.name}
           city={artist.city}
-          state={artist.venue.region}
+          state={artist.state}
           date={artist.date}
           venue={artist.venue}
           ticketUrl={artist.ticketUrl}
