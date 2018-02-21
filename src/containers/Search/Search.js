@@ -39,10 +39,10 @@ export class Search extends Component {
 
   submitHandler = async(e) => {
     e.preventDefault();
-    const { path } = this.props.match;
+    const { match, setFavoriteArtists } = this.props;
     await this.callFetch();
     
-    path === '/artists' ? await this.setFavoriteArtists() : null;
+    match.path === '/artists' ? await setFavoriteArtists() : null;
     this.setLocalStorage();
     this.setState({inputVal: ''});
   }
@@ -54,17 +54,6 @@ export class Search extends Component {
     
     return match.path === '/' ?
       await fetchApiEvents(locationObj[location]) : await fetchArtist(inputVal);
-  }
-
-  setFavoriteArtists = async() => {
-    const { location, allArtistEvents, setArtistInLocation } = this.props;
-    const splitLocation = location.split(', ');
-
-    let matchLocation = await allArtistEvents.filter(artist => {
-      return artist.state === splitLocation[1];
-    });
- 
-    setArtistInLocation(matchLocation);
   }
 
   setLocalStorage = () => {
