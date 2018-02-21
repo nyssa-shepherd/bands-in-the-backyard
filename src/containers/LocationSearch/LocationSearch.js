@@ -11,7 +11,6 @@ export class LocationSearch extends Component {
     super();
     this.state = {
       inputVal: '',
-      artist: '',
       favArtists: []
     };
   }
@@ -30,8 +29,8 @@ export class LocationSearch extends Component {
     const { match, setLocation } = this.props;
 
     this.setState({inputVal});
-    match.path === '/artists' ? 
-      this.setState({artist: inputVal}) : setLocation(inputVal);
+    match.path === '/' ? 
+      setLocation(inputVal) && this.callFetch() : null;
   }
 
   submitHandler = async(e) => {
@@ -46,11 +45,11 @@ export class LocationSearch extends Component {
 
 
   callFetch = async() => {
-    const { artist } = this.state;
+    const { inputVal } = this.state;
     const { location, fetchApiEvents, fetchArtist, match } = this.props;
     
     return match.path === '/' ?
-      await fetchApiEvents(locationObj[location]) : await fetchArtist(artist);
+      await fetchApiEvents(locationObj[location]) : await fetchArtist(inputVal);
   }
 
   setFavoriteArtists = async() => {
@@ -62,9 +61,9 @@ export class LocationSearch extends Component {
       return artist.state === splitLocation[1];
     });
  
-    this.setState({favArtists: matchLocation}, () => {
+    
       setArtistInLocation(matchLocation);
-    }); 
+ 
   }
 
   setLocalStorage = () => {
