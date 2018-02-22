@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Artists snapshot test 1`] = `
+exports[`Search snapshot test 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Artists />,
+  Symbol(enzyme.__unrendered__): <Search />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,14 +17,19 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <div
-        className="artist-page"
+      "children": <form
+        onSubmit={[Function]}
 >
-        <withRouter(Connect(Search))
-                setFavoriteArtists={[Function]}
+        <input
+                onChange={[Function]}
+                placeholder="Enter a location"
+                type="text"
+                value=""
         />
-        <withRouter(Connect(CardContainer)) />
-</div>,
+        <button>
+                search
+        </button>
+</form>,
     },
     "ref": null,
     "rendered": Object {
@@ -33,37 +38,47 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <withRouter(Connect(Search))
-            setFavoriteArtists={[Function]}
+          <input
+            onChange={[Function]}
+            placeholder="Enter a location"
+            type="text"
+            value=""
 />,
-          <withRouter(Connect(CardContainer)) />,
+          <button>
+            search
+</button>,
         ],
-        "className": "artist-page",
+        "onSubmit": [Function],
       },
       "ref": null,
       "rendered": Array [
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
-            "setFavoriteArtists": [Function],
+            "onChange": [Function],
+            "placeholder": "Enter a location",
+            "type": "text",
+            "value": "",
           },
           "ref": null,
           "rendered": null,
-          "type": [Function],
+          "type": "input",
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
+          "nodeType": "host",
+          "props": Object {
+            "children": "search",
+          },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": "search",
+          "type": "button",
         },
       ],
-      "type": "div",
+      "type": "form",
     },
     "type": "div",
   },
@@ -73,14 +88,19 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <div
-          className="artist-page"
+        "children": <form
+          onSubmit={[Function]}
 >
-          <withRouter(Connect(Search))
-                    setFavoriteArtists={[Function]}
+          <input
+                    onChange={[Function]}
+                    placeholder="Enter a location"
+                    type="text"
+                    value=""
           />
-          <withRouter(Connect(CardContainer)) />
-</div>,
+          <button>
+                    search
+          </button>
+</form>,
       },
       "ref": null,
       "rendered": Object {
@@ -89,37 +109,47 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <withRouter(Connect(Search))
-              setFavoriteArtists={[Function]}
+            <input
+              onChange={[Function]}
+              placeholder="Enter a location"
+              type="text"
+              value=""
 />,
-            <withRouter(Connect(CardContainer)) />,
+            <button>
+              search
+</button>,
           ],
-          "className": "artist-page",
+          "onSubmit": [Function],
         },
         "ref": null,
         "rendered": Array [
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "host",
             "props": Object {
-              "setFavoriteArtists": [Function],
+              "onChange": [Function],
+              "placeholder": "Enter a location",
+              "type": "text",
+              "value": "",
             },
             "ref": null,
             "rendered": null,
-            "type": [Function],
+            "type": "input",
           },
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
-            "props": Object {},
+            "nodeType": "host",
+            "props": Object {
+              "children": "search",
+            },
             "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "rendered": "search",
+            "type": "button",
           },
         ],
-        "type": "div",
+        "type": "form",
       },
       "type": "div",
     },

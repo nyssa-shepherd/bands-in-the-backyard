@@ -1,5 +1,5 @@
 import { eventReducer } from './eventReducer.js';
-import * as actions from '../actions/actions.js';s
+import * as actions from '../actions/actions.js';
 
 describe('eventReducer', () => {
 
