@@ -12,13 +12,18 @@ describe('Search', () => {
     wrapper = shallow(<Search />);
   });
 
-  it.only('default state of location is empty string', () => {
+  it('snapshot test', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('default state values', () => {
     expect(wrapper.state().inputVal).toEqual('');
+    expect(wrapper.state().favArtists).toEqual([]);
   });
 
   it('map the store correctly', () => {
-    const event1 = {
-      image: 'url',
+    const artist = {
+      key: 8,
       name: 'name',
       city: 'city',
       state: 'state',
@@ -27,11 +32,12 @@ describe('Search', () => {
       venue: 'venue',
       ticketUrl: 'url'
     };
-    const mockStore = {events: [event1], location: 'denver'};
+    const mockStore = {location: 'denver', allArtistEvents: [artist], artistInLocation: [artist]};
     const mapped = mapStateToProps(mockStore);
 
-    expect(mapped.events).toEqual(mockStore.events);
     expect(mapped.location).toEqual(mockStore.location);
+    expect(mapped.allArtistEvents).toEqual(mockStore.allArtistEvents);
+    expect(mapped.artistInLocation).toEqual(mockStore.artistInLocation);
   });
 
   it('call dispatch function after MDTP of fetchApiData', () => {
@@ -47,6 +53,22 @@ describe('Search', () => {
     const mapped = mapDispatchToProps(mockDispatch);
 
     mapped.setLocation();
+    expect(mockDispatch).toHaveBeenCalled();
+  });
+
+  it('call dispatch function after MDTP of fetchArtist', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+
+    mapped.fetchArtist();
+    expect(mockDispatch).toHaveBeenCalled();
+  });
+
+  it('call dispatch function after MDTP of setArtistInLocation', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+
+    mapped.setArtistInLocation();
     expect(mockDispatch).toHaveBeenCalled();
   });
 

@@ -21,21 +21,25 @@ ShallowWrapper {
         <img
           src={undefined}
 />,
-        <h1
-          className="artist-name"
-/>,
-        <h2
-          className="location-name"
+        <div
+          className="card-text"
 >
-          , 
-</h2>,
-        <p>
-           at 
-</p>,
-        <p />,
-        <a
-          href="{ticketurl}"
-/>,
+          <h1
+                    className="artist-name"
+          />
+          <h2
+                    className="location-name"
+          >
+                    , 
+          </h2>
+          <p>
+                     at 
+          </p>
+          <p />
+          <a
+                    href="{ticketurl}"
+          />
+</div>,
       ],
       "className": "card",
     },
@@ -57,74 +61,103 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
-          "className": "artist-name",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "h1",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
           "children": Array [
-            undefined,
-            ", ",
-            undefined,
+            <h1
+              className="artist-name"
+/>,
+            <h2
+              className="location-name"
+>
+              , 
+</h2>,
+            <p>
+               at 
+</p>,
+            <p />,
+            <a
+              href="{ticketurl}"
+/>,
           ],
-          "className": "location-name",
+          "className": "card-text",
         },
         "ref": null,
         "rendered": Array [
-          undefined,
-          ", ",
-          undefined,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "artist-name",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                undefined,
+                ", ",
+                undefined,
+              ],
+              "className": "location-name",
+            },
+            "ref": null,
+            "rendered": Array [
+              undefined,
+              ", ",
+              undefined,
+            ],
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                undefined,
+                " at ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              undefined,
+              " at ",
+              undefined,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "href": "{ticketurl}",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "a",
+          },
         ],
-        "type": "h2",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            undefined,
-            " at ",
-            undefined,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          undefined,
-          " at ",
-          undefined,
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": undefined,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": undefined,
-          "href": "{ticketurl}",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "a",
+        "type": "div",
       },
     ],
     "type": "div",
@@ -139,21 +172,25 @@ ShallowWrapper {
           <img
             src={undefined}
 />,
-          <h1
-            className="artist-name"
-/>,
-          <h2
-            className="location-name"
+          <div
+            className="card-text"
 >
-            , 
-</h2>,
-          <p>
-             at 
-</p>,
-          <p />,
-          <a
-            href="{ticketurl}"
-/>,
+            <h1
+                        className="artist-name"
+            />
+            <h2
+                        className="location-name"
+            >
+                        , 
+            </h2>
+            <p>
+                         at 
+            </p>
+            <p />
+            <a
+                        href="{ticketurl}"
+            />
+</div>,
         ],
         "className": "card",
       },
@@ -175,74 +212,103 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
-            "className": "artist-name",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "h1",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
             "children": Array [
-              undefined,
-              ", ",
-              undefined,
+              <h1
+                className="artist-name"
+/>,
+              <h2
+                className="location-name"
+>
+                , 
+</h2>,
+              <p>
+                 at 
+</p>,
+              <p />,
+              <a
+                href="{ticketurl}"
+/>,
             ],
-            "className": "location-name",
+            "className": "card-text",
           },
           "ref": null,
           "rendered": Array [
-            undefined,
-            ", ",
-            undefined,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "artist-name",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  undefined,
+                  ", ",
+                  undefined,
+                ],
+                "className": "location-name",
+              },
+              "ref": null,
+              "rendered": Array [
+                undefined,
+                ", ",
+                undefined,
+              ],
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  undefined,
+                  " at ",
+                  undefined,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                undefined,
+                " at ",
+                undefined,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "href": "{ticketurl}",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "a",
+            },
           ],
-          "type": "h2",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              undefined,
-              " at ",
-              undefined,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            undefined,
-            " at ",
-            undefined,
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": undefined,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": undefined,
-            "href": "{ticketurl}",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "a",
+          "type": "div",
         },
       ],
       "type": "div",

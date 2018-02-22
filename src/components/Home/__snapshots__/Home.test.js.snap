@@ -18,15 +18,22 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Connect(Search) />,
-        <h2>
-          UPCOMING NEAR DENVER
-</h2>,
-        <h3>
-          Month Name
-</h3>,
-        <hr />,
-        <Connect(CardContainer) />,
+        <div
+          className="home-header"
+>
+          <withRouter(Connect(Search)) />
+          <h2>
+                    UPCOMING NEAR YOU
+          </h2>
+          <h3>
+                    Month Name
+          </h3>
+</div>,
+        <div
+          className="cards"
+>
+          <withRouter(Connect(CardContainer)) />
+</div>,
       ],
       "className": "home-page",
     },
@@ -35,51 +42,74 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <withRouter(Connect(Search)) />,
+            <h2>
+              UPCOMING NEAR YOU
+</h2>,
+            <h3>
+              Month Name
+</h3>,
+          ],
+          "className": "home-header",
+        },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "UPCOMING NEAR YOU",
+            },
+            "ref": null,
+            "rendered": "UPCOMING NEAR YOU",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Month Name",
+            },
+            "ref": null,
+            "rendered": "Month Name",
+            "type": "h3",
+          },
+        ],
+        "type": "div",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "UPCOMING NEAR DENVER",
+          "children": <withRouter(Connect(CardContainer)) />,
+          "className": "cards",
         },
         "ref": null,
-        "rendered": "UPCOMING NEAR DENVER",
-        "type": "h2",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Month Name",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
-        "ref": null,
-        "rendered": "Month Name",
-        "type": "h3",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": "hr",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "type": "div",
       },
     ],
     "type": "div",
@@ -91,15 +121,22 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Connect(Search) />,
-          <h2>
-            UPCOMING NEAR DENVER
-</h2>,
-          <h3>
-            Month Name
-</h3>,
-          <hr />,
-          <Connect(CardContainer) />,
+          <div
+            className="home-header"
+>
+            <withRouter(Connect(Search)) />
+            <h2>
+                        UPCOMING NEAR YOU
+            </h2>
+            <h3>
+                        Month Name
+            </h3>
+</div>,
+          <div
+            className="cards"
+>
+            <withRouter(Connect(CardContainer)) />
+</div>,
         ],
         "className": "home-page",
       },
@@ -108,51 +145,74 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <withRouter(Connect(Search)) />,
+              <h2>
+                UPCOMING NEAR YOU
+</h2>,
+              <h3>
+                Month Name
+</h3>,
+            ],
+            "className": "home-header",
+          },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "UPCOMING NEAR YOU",
+              },
+              "ref": null,
+              "rendered": "UPCOMING NEAR YOU",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Month Name",
+              },
+              "ref": null,
+              "rendered": "Month Name",
+              "type": "h3",
+            },
+          ],
+          "type": "div",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "UPCOMING NEAR DENVER",
+            "children": <withRouter(Connect(CardContainer)) />,
+            "className": "cards",
           },
           "ref": null,
-          "rendered": "UPCOMING NEAR DENVER",
-          "type": "h2",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Month Name",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
           },
-          "ref": null,
-          "rendered": "Month Name",
-          "type": "h3",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": "hr",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "type": "div",
         },
       ],
       "type": "div",
