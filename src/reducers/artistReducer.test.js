@@ -25,3 +25,28 @@ describe('artistReducer', () => {
   });
 
 });
+
+describe('artistInLocationReducer', () => {
+
+  it('return default state', () => {
+    const expected = [];
+    expect(artistInLocationReducer(undefined, {})).toEqual(expected);
+  });
+
+  it('return new state', () => {
+    const artist = {
+      key: 90,
+      name: 'name',
+      city: 'city',
+      state: 'state',
+      date: 'date',
+      time: 'time',
+      venue: 'venue',
+      ticketUrl: 'url'
+    };
+    const expected = [artist];
+
+    expect(artistInLocationReducer(undefined, actions.setArtistInLocation([artist]))).toEqual(expected);
+  });
+
+});
