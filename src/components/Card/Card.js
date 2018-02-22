@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './Card.css';
 
 const Card = ({name, city, state, date, time, venue, ticketUrl, image}) => {
+
   return (
     <div className='card'>
       <img src={image} />

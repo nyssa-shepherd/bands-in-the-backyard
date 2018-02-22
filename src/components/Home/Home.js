@@ -6,11 +6,14 @@ import './Home.css';
 const Home = () => {
   return (
     <div className='home-page'>
-      <Search />
-      <h2>UPCOMING NEAR YOU</h2>
-      <h3>Month Name</h3>
-      <hr />
-      <CardContainer />
+      <div className='home-header'>
+        <Search />
+        <h2>UPCOMING NEAR YOU</h2>
+        <h3>Month Name</h3>
+      </div>
+      <div className='cards'>
+        <CardContainer />
+      </div>
     </div>
   );
 };

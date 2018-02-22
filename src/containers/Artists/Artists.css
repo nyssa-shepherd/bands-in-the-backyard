@@ -1,0 +1,9 @@
+.artist-page {
+  background-color: orange;
+  left: 300px;
+  position: absolute;
+}
+
+input {
+  height: 300px;
+}
