@@ -18,6 +18,7 @@ export class CardContainer extends Component {
           date={artist.date}
           venue={artist.venue}
           ticketUrl={artist.ticketUrl}
+          type='artist-card'
           key={i}
         />;
       })
@@ -31,6 +32,7 @@ export class CardContainer extends Component {
           time={event.time}
           venue={event.venue}
           ticketUrl={event.ticketUrl}
+          type='event-card'
           key={i}
         />;
       });

@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink, Route } from 'react-router-dom';
+import DefaultPage from '../DefaultPage/DefaultPage';
 import Home from '../Home/Home.js';
 import Artists from '../Artists/Artists.js';
 import './Header.css';
@@ -10,7 +11,8 @@ const Header = () => {
       <header>
         <h1>Bands <span>in the</span> Backyard</h1>
         <div>
-          <NavLink to='/' 
+          <NavLink 
+            to='/home' 
             activeClassName='active'
             className='home nav'>
             HOME
@@ -24,7 +26,7 @@ const Header = () => {
         </div>
       </header>
       <div>
-        <Route exact path='/' component={Home} />
+        <Route exact path='/home' component={Home} />
         <Route exact path='/artists' component={Artists} />
       </div>
     </div>

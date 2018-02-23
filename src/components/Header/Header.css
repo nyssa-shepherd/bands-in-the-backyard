@@ -12,6 +12,10 @@ header {
     width: 100%;
 }
 
+.show {
+    display: none;
+}
+
 h1 {
     color: #fff;
     display: inline;

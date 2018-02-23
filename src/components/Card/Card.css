@@ -5,6 +5,23 @@
   width: 300px;
 }
 
+.artist-card {
+  border: none;
+  border-bottom: 1px solid black;
+  height: 180px; 
+  margin-left: 30%;
+  width: 40%;
+}
+
+.artist-card img {
+  display: none;
+}
+
+.artist-card .artist-name {
+  font-size: 30px;
+  padding-left: 0;
+}
+
 .card-text {
   padding: 20px;
 }

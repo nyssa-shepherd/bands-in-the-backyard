@@ -1,0 +1,17 @@
+.default-page {
+  background-image: url('../../images/concert-home.jpg');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+form {
+  margin: 0 35%;
+  padding-top: 120px;
+}
+
+input {
+  height: 90px;
+}
+
