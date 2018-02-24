@@ -1,5 +1,5 @@
 .card {
-  border: 1px solid black;
+  background-color: white;
   height: 440px;
   margin: 10px;
   width: 300px;
@@ -27,7 +27,7 @@
 }
 
 .artist-name {
-  color: #a52e1e;
+  color: #1a3c3e;
   font-size: 18px;
   text-align: justify;
 

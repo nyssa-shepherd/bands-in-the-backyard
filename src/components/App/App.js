@@ -11,15 +11,15 @@ class App extends Component {
     return (
       <div className="App">
         {
-          localStorage.location &&
-          <Header />
+          localStorage.location && 
+            <Header/>
         }
 
         {
           !localStorage.location &&
-          <DefaultPage />
+          <Route exact path='/' component={DefaultPage} />
         }
-        <Route exact path='/' component={DefaultPage} />
+        
       </div>
     );
   }
