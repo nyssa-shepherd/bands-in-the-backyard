@@ -46,11 +46,21 @@ export const cleanArtistData = artistArray => {
       city: artist.venue.city,
       state: artist.venue.region,
       date: artist.datetime,
-      venue: artist.venue.name
-      //ticketUrl: artist.offers[0].url
+      venue: artist.venue.name,
+      ticketUrl: artist.url
     };
   });
   return Promise.all(cleanData);
+};
+
+export const fetchArtistPic = async(artistName) => {
+  try {
+    const initialFetch = await fetch(`https://rest.bandsintown.com/artists/${artistName}?app_id=2`);
+    const data = await initialFetch.json();
+    return data.image_url;
+  } catch (err) {
+    throw Error;
+  }
 };
 
 

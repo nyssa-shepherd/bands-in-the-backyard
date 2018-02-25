@@ -1,8 +1,7 @@
 import React from 'react';
 import { NavLink, Route } from 'react-router-dom';
-import DefaultPage from '../DefaultPage/DefaultPage';
 import Home from '../Home/Home.js';
-import Artists from '../Artists/Artists.js';
+import Artists from '../../containers/Artists/Artists.js';
 import './Header.css';
 import Search from '../../containers/Search/Search.js';
 

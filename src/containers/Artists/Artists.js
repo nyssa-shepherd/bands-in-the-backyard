@@ -1,29 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Search from '../../containers/Search/Search.js';
 import CardContainer from '../../containers/CardContainer/CardContainer.js';
 import { setArtistInLocation } from '../../actions/actions.js';
 import './Artists.css';
 
 export class Artists extends Component {
-  setFavoriteArtists = async() => {
-    const { location, allArtistEvents, setArtistInLocation } = this.props;
-    const splitLocation = location.split(', ');
-
-    let matchLocation = await allArtistEvents.filter(artist => {
-      return artist.state === splitLocation[1];
-    });
- 
-    setArtistInLocation(matchLocation);
-  }
-
   render () {  
     return (
-      <div>
-        <div className='artist-page'>
-          <Search setFavoriteArtists={this.setFavoriteArtists}/>
-          <CardContainer />
-        </div>
+      <div className='artist-page'>
+        <CardContainer />
       </div>
     );
   }

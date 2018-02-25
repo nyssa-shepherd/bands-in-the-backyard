@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router';
+import { withRouter, Redirect, Route } from 'react-router';
+import Home from '../../components/Home/Home.js';
 import PropTypes from 'prop-types';
 import { Trie } from '@rvwatch/completeMe';
 import { 
@@ -17,7 +18,8 @@ export class Search extends Component {
     this.state = {
       inputVal: '',
       favArtists: [],
-      suggestedWords: []
+      suggestedWords: [],
+      redirect: false
     };
 
     this.searchComplete = new Trie();
@@ -41,7 +43,7 @@ export class Search extends Component {
     const { match, setLocation } = this.props;
 
     this.setState({
-      suggestedWords: this.searchComplete.suggest(inputVal),
+      //suggestedWords: this.searchComplete.suggest(inputVal),
       inputVal
     });
     match.path === '/' ? 
@@ -50,12 +52,15 @@ export class Search extends Component {
 
   submitHandler = async(e) => {
     e.preventDefault();
-    const { match, setFavoriteArtists } = this.props;
+    const { path } = this.props.match;
     await this.callFetch();
 
-    match.path === '/artists' ? await setFavoriteArtists() : null;
+    path === '/artists' ? await this.setFavoriteArtists() : null;
     this.setLocalStorage();
-    this.setState({inputVal: ''});
+    this.setState({
+      inputVal: '',
+      redirect: true
+    });
   }
 
   callFetch = async() => {
@@ -64,6 +69,17 @@ export class Search extends Component {
     
     return match.path === '/' ?
       await fetchApiEvents(locationObj[location]) : await fetchArtist(inputVal);
+  }
+
+  setFavoriteArtists = async() => {
+    const { location, allArtistEvents, setArtistInLocation } = this.props;
+    const splitLocation = location.split(', ');
+
+    let matchLocation = await allArtistEvents.filter(artist => {
+      return artist.state === splitLocation[1];
+    });
+ 
+    setArtistInLocation(matchLocation);
   }
 
   setLocalStorage = () => {
@@ -76,6 +92,13 @@ export class Search extends Component {
   }
 
   render () {
+    const { redirect } = this.state;
+    const { path } = this.props.match;
+
+    if (redirect === true && path !== '/artists') {
+      return <Redirect to='/home' />; 
+    }
+    
     return (
       <div>
         <form onSubmit={(e) => this.submitHandler(e)}>
@@ -85,14 +108,13 @@ export class Search extends Component {
             placeholder='Enter a location'
             value={this.state.inputVal}
           />
-          
-            <datalist id="suggestions">
+            {/* <datalist id="suggestions">
               {
                 this.state.suggestedWords.slice(0, 5).map(word => {
                   return (<option value={word}>hi</option>);
                 })
               }
-            </datalist>
+            </datalist> */}
           
           <button>search</button>
         </form>
