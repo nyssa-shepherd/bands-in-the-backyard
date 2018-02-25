@@ -1,4 +1,4 @@
-import { cleanData, fetchArtistApi } from '../components/apiCall/apiCall.js';
+import { cleanData, cleanArtistData } from '../components/apiCall/apiCall.js';
 
 export const fetchApiEvents = (locationKey) => async (dispatch) => {
   const events = await cleanData(locationKey);
@@ -16,7 +16,7 @@ export const setLocation = location => ({
 });
 
 export const fetchArtist = (artistName) => async (dispatch) => {
-  const artists = await fetchArtistApi(artistName);
+  const artists = await cleanArtistData(artistName);
   return dispatch(addArtist(artists));
 };
 

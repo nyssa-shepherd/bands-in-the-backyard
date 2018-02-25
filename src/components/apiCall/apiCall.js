@@ -33,13 +33,14 @@ export const fetchArtistApi = async(artistName) => {
   try {
     const initialFetch = await fetch(`https://rest.bandsintown.com/artists/${artistName}/events?app_id=dasfdfsda`);
     const data = await initialFetch.json();
-    return cleanArtistData(data);
+    return data;
   } catch (err) {
     throw Error;
   }
 };
 
-export const cleanArtistData = artistArray => {
+export const cleanArtistData = async artistName => {
+  const artistArray = await fetchArtistApi(artistName);
   const cleanData = artistArray.map(async artist => {
     return await {
       id: artist.id,

@@ -109,3 +109,28 @@ export const mockEvent = {
     }
   }] 
 }; 
+
+export const mockArtist = [
+  {
+    "id": "21203777",
+    "artist_id": "510",
+    "url": "https://www.bandsintown.com/e/21203777?app_id=dasfdfsda&came_from=267",
+    "on_sale_datetime": "2018-01-29T09:59:00",
+    "datetime": "2018-03-01T19:00:00",
+    "description":"",
+    "venue": {
+      "name": "Estadio Olimpico Athahualpa ",
+      "latitude": "-0.2166667",
+      "longitude": "-78.5",
+      "city": "Quito",
+      "region": "18",
+      "country": "Ecuador"
+    },
+    "offers": [{
+      "type": "Tickets",
+      "url": "https://www.bandsintown.com/t/21203777?app_id=dasfdfsda&came_from=267",
+      "status": "available"
+    }],
+    "lineup": ["Maroon 5"]
+  }
+];
