@@ -1,11 +1,16 @@
 form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   left: 15%;
   position: absolute;
   top: 200px;
   width: 70%;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
 }
 
 input {
@@ -30,4 +35,18 @@ button:hover {
 
 input::placeholder {
   font-size: 18px;
+}
+
+#suggestions {
+  background-color: rgba(255, 255, 255, 0.319);
+}
+
+datalist {
+  border-radius: 5px;
+  display: block;
+}
+
+option {
+  color: rgb(47, 47, 47);
+  font-size: 24px;
 }

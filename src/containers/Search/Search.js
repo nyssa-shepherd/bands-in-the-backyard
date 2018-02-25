@@ -39,15 +39,23 @@ export class Search extends Component {
 
   inputHandler = (e) => {
     const inputVal = e.target.value;
-    const { match, setLocation } = this.props;
+    const { path } = this.props.match;
 
-    this.setState({
-      //suggestedWords: this.searchComplete.suggest(inputVal),
-      inputVal
+    this.setState({inputVal}, () => {
+      path !== '/artists' ? 
+        this.handleLocation()  : null;
     });
+  }
 
-    match.path !== '/artists' ? 
-      setLocation(inputVal) && this.callFetch() : null;
+  handleLocation = () => {
+    const { inputVal } = this.state;
+    const { setLocation } = this.props;
+    console.log(inputVal)
+    const suggestedWords = this.searchComplete.suggest(inputVal);
+
+    this.callFetch();
+    setLocation(inputVal);
+    this.setState({suggestedWords});
   }
 
   submitHandler = async(e) => {
@@ -82,7 +90,7 @@ export class Search extends Component {
   }
 
   render () {
-    const { redirect } = this.state;
+    const { redirect, suggestedWords, inputVal } = this.state;
     const { path } = this.props.match;
 
     if (redirect === true && path === '/') {
@@ -92,21 +100,27 @@ export class Search extends Component {
     return (
       <div>
         <form onSubmit={(e) => this.submitHandler(e)}>
-          <input
-            onChange={(e) => this.inputHandler(e)} 
-            type='text'
-            placeholder='Enter a location'
-            value={this.state.inputVal}
-          />
-          {/* <datalist id="suggestions">
-              {
-                this.state.suggestedWords.slice(0, 5).map(word => {
-                  return (<option value={word}>hi</option>);
-                })
-              }
-            </datalist> */}
-          
-          <button>search</button>
+          <div className='search'>
+            <input
+              onChange={(e) => this.inputHandler(e)} 
+              type='text'
+              placeholder='Enter a location'
+              value={inputVal}
+            />
+            <button>search</button>
+          </div>
+          {
+            path !== '/artists' &&
+            <div className='list'>
+              <datalist id="suggestions">
+                {
+                  suggestedWords.slice(0, 5).map((word, i) => {
+                    return (<option value={word} key={i}>{word}</option>);
+                  })
+                }
+              </datalist>
+            </div>
+          }
         </form>
       </div>
     );
