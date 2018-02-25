@@ -7,9 +7,12 @@ import {
 
 describe('Search', () => {
   let wrapper;
+  let mockMatch;
+
 
   beforeEach(() => {
-    wrapper = shallow(<Search />);
+    mockMatch = {path: '/artists'};
+    wrapper = shallow(<Search match={mockMatch}/>);
   });
 
   it('snapshot test', () => {
