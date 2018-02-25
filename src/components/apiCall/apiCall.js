@@ -6,14 +6,15 @@ export const fetchEventApi = async(locationKey) => {
       `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=${locationKey}&apikey=${apiKey}`
     );
     const data = await initialFetch.json();
-    return cleanData(data._embedded.events);
+    return data._embedded.events;
   } catch (error) {
     throw Error;
   }
 };
 
-export const cleanData = eventArray => {
-  const cleanData =  eventArray.map(async event => {
+export const cleanData = async (locationKey) => {
+  const events = await fetchEventApi(locationKey);
+  const cleanData =  events.map(async event => {
     return await {
       image: event.images[0].url,
       name: event.name,

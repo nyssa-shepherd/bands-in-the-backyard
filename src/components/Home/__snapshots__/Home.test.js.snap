@@ -18,16 +18,13 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <withRouter(Connect(Search)) />,
         <div
           className="home-header"
 >
-          <withRouter(Connect(Search)) />
           <h2>
                     UPCOMING NEAR YOU
           </h2>
-          <h3>
-                    Month Name
-          </h3>
 </div>,
         <div
           className="cards"
@@ -42,53 +39,34 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <withRouter(Connect(Search)) />,
-            <h2>
-              UPCOMING NEAR YOU
+          "children": <h2>
+            UPCOMING NEAR YOU
 </h2>,
-            <h3>
-              Month Name
-</h3>,
-          ],
           "className": "home-header",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {},
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "UPCOMING NEAR YOU",
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "UPCOMING NEAR YOU",
-            },
-            "ref": null,
-            "rendered": "UPCOMING NEAR YOU",
-            "type": "h2",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Month Name",
-            },
-            "ref": null,
-            "rendered": "Month Name",
-            "type": "h3",
-          },
-        ],
+          "ref": null,
+          "rendered": "UPCOMING NEAR YOU",
+          "type": "h2",
+        },
         "type": "div",
       },
       Object {
@@ -121,16 +99,13 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <withRouter(Connect(Search)) />,
           <div
             className="home-header"
 >
-            <withRouter(Connect(Search)) />
             <h2>
                         UPCOMING NEAR YOU
             </h2>
-            <h3>
-                        Month Name
-            </h3>
 </div>,
           <div
             className="cards"
@@ -145,53 +120,34 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <withRouter(Connect(Search)) />,
-              <h2>
-                UPCOMING NEAR YOU
+            "children": <h2>
+              UPCOMING NEAR YOU
 </h2>,
-              <h3>
-                Month Name
-</h3>,
-            ],
             "className": "home-header",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {},
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "UPCOMING NEAR YOU",
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "UPCOMING NEAR YOU",
-              },
-              "ref": null,
-              "rendered": "UPCOMING NEAR YOU",
-              "type": "h2",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Month Name",
-              },
-              "ref": null,
-              "rendered": "Month Name",
-              "type": "h3",
-            },
-          ],
+            "ref": null,
+            "rendered": "UPCOMING NEAR YOU",
+            "type": "h2",
+          },
           "type": "div",
         },
         Object {

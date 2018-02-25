@@ -18,7 +18,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <header>
+        <div
+          className="above-header"
+>
           <h1>
                     Bands 
                     <span>
@@ -31,7 +33,7 @@ ShallowWrapper {
                               activeClassName="active"
                               ariaCurrent="true"
                               className="home nav"
-                              to="/"
+                              to="/home"
                     >
                               HOME
                     </NavLink>
@@ -44,12 +46,13 @@ ShallowWrapper {
                               ARTISTS
                     </NavLink>
           </div>
-</header>,
+</div>,
+        <header />,
         <div>
           <Route
                     component={[Function]}
                     exact={true}
-                    path="/"
+                    path="/home"
           />
           <Route
                     component={[Function]}
@@ -79,7 +82,7 @@ ShallowWrapper {
                             activeClassName="active"
                             ariaCurrent="true"
                             className="home nav"
-                            to="/"
+                            to="/home"
               >
                             HOME
               </NavLink>
@@ -93,6 +96,7 @@ ShallowWrapper {
               </NavLink>
 </div>,
           ],
+          "className": "above-header",
         },
         "ref": null,
         "rendered": Array [
@@ -137,7 +141,7 @@ ShallowWrapper {
                   activeClassName="active"
                   ariaCurrent="true"
                   className="home nav"
-                  to="/"
+                  to="/home"
 >
                   HOME
 </NavLink>,
@@ -162,7 +166,7 @@ ShallowWrapper {
                   "ariaCurrent": "true",
                   "children": "HOME",
                   "className": "home nav",
-                  "to": "/",
+                  "to": "/home",
                 },
                 "ref": null,
                 "rendered": "HOME",
@@ -187,6 +191,15 @@ ShallowWrapper {
             "type": "div",
           },
         ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
         "type": "header",
       },
       Object {
@@ -198,7 +211,7 @@ ShallowWrapper {
             <Route
               component={[Function]}
               exact={true}
-              path="/"
+              path="/home"
 />,
             <Route
               component={[Function]}
@@ -216,7 +229,7 @@ ShallowWrapper {
             "props": Object {
               "component": [Function],
               "exact": true,
-              "path": "/",
+              "path": "/home",
             },
             "ref": null,
             "rendered": null,
@@ -248,7 +261,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <header>
+          <div
+            className="above-header"
+>
             <h1>
                         Bands 
                         <span>
@@ -261,7 +276,7 @@ ShallowWrapper {
                                     activeClassName="active"
                                     ariaCurrent="true"
                                     className="home nav"
-                                    to="/"
+                                    to="/home"
                         >
                                     HOME
                         </NavLink>
@@ -274,12 +289,13 @@ ShallowWrapper {
                                     ARTISTS
                         </NavLink>
             </div>
-</header>,
+</div>,
+          <header />,
           <div>
             <Route
                         component={[Function]}
                         exact={true}
-                        path="/"
+                        path="/home"
             />
             <Route
                         component={[Function]}
@@ -309,7 +325,7 @@ ShallowWrapper {
                                 activeClassName="active"
                                 ariaCurrent="true"
                                 className="home nav"
-                                to="/"
+                                to="/home"
                 >
                                 HOME
                 </NavLink>
@@ -323,6 +339,7 @@ ShallowWrapper {
                 </NavLink>
 </div>,
             ],
+            "className": "above-header",
           },
           "ref": null,
           "rendered": Array [
@@ -367,7 +384,7 @@ ShallowWrapper {
                     activeClassName="active"
                     ariaCurrent="true"
                     className="home nav"
-                    to="/"
+                    to="/home"
 >
                     HOME
 </NavLink>,
@@ -392,7 +409,7 @@ ShallowWrapper {
                     "ariaCurrent": "true",
                     "children": "HOME",
                     "className": "home nav",
-                    "to": "/",
+                    "to": "/home",
                   },
                   "ref": null,
                   "rendered": "HOME",
@@ -417,6 +434,15 @@ ShallowWrapper {
               "type": "div",
             },
           ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
           "type": "header",
         },
         Object {
@@ -428,7 +454,7 @@ ShallowWrapper {
               <Route
                 component={[Function]}
                 exact={true}
-                path="/"
+                path="/home"
 />,
               <Route
                 component={[Function]}
@@ -446,7 +472,7 @@ ShallowWrapper {
               "props": Object {
                 "component": [Function],
                 "exact": true,
-                "path": "/",
+                "path": "/home",
               },
               "ref": null,
               "rendered": null,

@@ -21,7 +21,7 @@ describe('eventReducer', () => {
     };
     const expected = [event];
 
-    expect(eventReducer(undefined, actions.addEvents(event))).toEqual(expected);
+    expect(eventReducer(undefined, actions.addEvents([event]))).toEqual(expected);
   });
 
 });
