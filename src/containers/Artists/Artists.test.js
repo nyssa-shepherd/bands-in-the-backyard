@@ -9,6 +9,11 @@ describe('Artists', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('default state', () => {
+    const wrapper = shallow(<Artists />);
+    expect(wrapper.state().noArtistMessage).toEqual('');
+  });
+
   it('map the store correctly', () => {
     const artist = {
       key: 9,
