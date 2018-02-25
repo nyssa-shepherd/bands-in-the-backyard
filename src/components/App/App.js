@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header.js';
-import { Route, Redirect } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import DefaultPage from '../DefaultPage/DefaultPage';
-import Home from '../Home/Home.js';
 import './App.css';
 
 class App extends Component {  
