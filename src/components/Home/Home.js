@@ -7,7 +7,6 @@ const Home = () => {
   return (
     <div className='home-page'>
       <div className='home-header'>
-        <Search />
         <h2>UPCOMING NEAR YOU</h2>
       </div>
       <div className='cards'>

@@ -2,49 +2,78 @@
 
 header {
     background-image: url('../../images/concert-home.jpg');
-    background-position: top;
+    background-position: bottom;
     background-size: cover;
-     background-repeat: no-repeat; 
+    background-repeat: no-repeat; 
     display: flex;
     font-family: Oswald;
     justify-content: space-between;
-    height: 150px;
+    height: 390px;
+    margin-bottom: 40px;
     width: 100%;
+}
+
+.above-header {
+    margin-bottom: 10px;
+}
+
+header form {
+    margin: 120px 175%;
+    width: 300%;
+}
+
+header input {
+    border-radius: 5px;
+    height: 40px;
+}
+
+header button {
+    background-color: rgba(4, 82, 80, 0.607);
+    border-radius: 5px;
+    height: 45px;
+    width: 90px;
 }
 
 .show {
     display: none;
 }
 
+.above-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 h1 {
-    color: #fff;
+    color: rgb(4, 82, 79);
     display: inline;
-    font-size: 45px;
-    padding: 35px 0 0 20px;
+    font-size: 35px;
+    padding: 5px 0 0 20px;
+    margin: 10px 0 15px;
 }
 
 span {
-    color: #fff;  
+    color: rgb(4, 82, 79);  
     font-weight: 200;
     font-size: 25px; 
 }
 
 .nav {
-    color: #fff;
+    color: rgb(4, 82, 79);
     font-size: 20px;
     margin: 10px;
     position: relative;
     right: 20px;
     text-decoration: transparent;
-    top: 90px;
+    top: 30px;
 }
 
 .nav:hover {
-    border-bottom: #fff 3px solid;
+    border-bottom: rgb(4, 82, 79) 3px solid;
     font-weight: 700px; 
 }
 
 .active {
-    border-bottom: #fff 3px solid;
+    border-bottom: rgb(4, 82, 79) 3px solid;
     font-weight: 700px; 
 }

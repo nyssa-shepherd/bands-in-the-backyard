@@ -4,11 +4,12 @@ import DefaultPage from '../DefaultPage/DefaultPage';
 import Home from '../Home/Home.js';
 import Artists from '../Artists/Artists.js';
 import './Header.css';
+import Search from '../../containers/Search/Search.js';
 
 const Header = () => {
   return (
     <div>
-      <header>
+      <div className='above-header'>
         <h1>Bands <span>in the</span> Backyard</h1>
         <div>
           <NavLink 
@@ -24,6 +25,9 @@ const Header = () => {
               ARTISTS
           </NavLink>
         </div>
+      </div>
+      <header>
+        <Search />
       </header>
       <div>
         <Route exact path='/home' component={Home} />

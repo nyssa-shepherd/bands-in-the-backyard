@@ -92,7 +92,6 @@ export class Search extends Component {
                   return (<option value={word}>hi</option>);
                 })
               }
-          
             </datalist>
           
           <button>search</button>
