@@ -29,35 +29,3 @@ hr {
     position: relative;
     width: 1350px;
 }
-
-form {
-    display: flex;
-    align-content: center;
-    margin-top: 20px;
-    width: 390px;
-}
-
-input {
-    height: 20px;
-    margin-right: 5px;
-    width: 85%;
-}
-
-input::placeholder {
-    font-size: 18px;
-}
-
-button {
-    background-color: rgba(4, 82, 80, 0.607); 
-    border: none;
-    color: #fff;
-    font-size: 15px;
-    height: 25px;
-    padding: 5px;
-    width: 55px;
-}
-
-button:hover {
-    background-color: rgba(11, 125, 121, 0.888); 
-
-}

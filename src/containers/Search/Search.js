@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter, Redirect, Route } from 'react-router';
-import Home from '../../components/Home/Home.js';
 import PropTypes from 'prop-types';
+import './Search.css';
 import { Trie } from '@rvwatch/completeMe';
 import { 
   setLocation, 

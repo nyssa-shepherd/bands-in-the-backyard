@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import CardContainer from '../../containers/CardContainer/CardContainer.js';
 import { setArtistInLocation } from '../../actions/actions.js';
+import Search from '../../containers/Search/Search.js';
 import './Artists.css';
 
 export class Artists extends Component {
   render () {  
     return (
       <div className='artist-page'>
+        <Search />
         <CardContainer />
       </div>
     );

@@ -17,24 +17,6 @@ header {
     margin-bottom: 10px;
 }
 
-header form {
-    margin: 120px 80%;
-    width: 300%;
-}
-
-header input {
-    border-radius: 5px;
-    font-size:24px;
-    height: 40px;
-}
-
-header button {
-    background-color: rgba(4, 82, 80, 0.607);
-    border-radius: 5px;
-    height: 45px;
-    width: 90px;
-}
-
 .show {
     display: none;
 }
