@@ -26,15 +26,19 @@ ShallowWrapper {
       "children": <form
         onSubmit={[Function]}
 >
-        <input
-                onChange={[Function]}
-                placeholder="Enter a location"
-                type="text"
-                value=""
-        />
-        <button>
-                search
-        </button>
+        <div
+                className="search"
+        >
+                <input
+                        onChange={[Function]}
+                        placeholder="Enter a location"
+                        type="text"
+                        value=""
+                />
+                <button>
+                        search
+                </button>
+        </div>
 </form>,
     },
     "ref": null,
@@ -44,15 +48,20 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <input
-            onChange={[Function]}
-            placeholder="Enter a location"
-            type="text"
-            value=""
-/>,
-          <button>
-            search
-</button>,
+          <div
+            className="search"
+>
+            <input
+                        onChange={[Function]}
+                        placeholder="Enter a location"
+                        type="text"
+                        value=""
+            />
+            <button>
+                        search
+            </button>
+</div>,
+          false,
         ],
         "onSubmit": [Function],
       },
@@ -63,26 +72,50 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "onChange": [Function],
-            "placeholder": "Enter a location",
-            "type": "text",
-            "value": "",
+            "children": Array [
+              <input
+                onChange={[Function]}
+                placeholder="Enter a location"
+                type="text"
+                value=""
+/>,
+              <button>
+                search
+</button>,
+            ],
+            "className": "search",
           },
           "ref": null,
-          "rendered": null,
-          "type": "input",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "onChange": [Function],
+                "placeholder": "Enter a location",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "search",
+              },
+              "ref": null,
+              "rendered": "search",
+              "type": "button",
+            },
+          ],
+          "type": "div",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "search",
-          },
-          "ref": null,
-          "rendered": "search",
-          "type": "button",
-        },
+        false,
       ],
       "type": "form",
     },
@@ -97,15 +130,19 @@ ShallowWrapper {
         "children": <form
           onSubmit={[Function]}
 >
-          <input
-                    onChange={[Function]}
-                    placeholder="Enter a location"
-                    type="text"
-                    value=""
-          />
-          <button>
-                    search
-          </button>
+          <div
+                    className="search"
+          >
+                    <input
+                              onChange={[Function]}
+                              placeholder="Enter a location"
+                              type="text"
+                              value=""
+                    />
+                    <button>
+                              search
+                    </button>
+          </div>
 </form>,
       },
       "ref": null,
@@ -115,15 +152,20 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <input
-              onChange={[Function]}
-              placeholder="Enter a location"
-              type="text"
-              value=""
-/>,
-            <button>
-              search
-</button>,
+            <div
+              className="search"
+>
+              <input
+                            onChange={[Function]}
+                            placeholder="Enter a location"
+                            type="text"
+                            value=""
+              />
+              <button>
+                            search
+              </button>
+</div>,
+            false,
           ],
           "onSubmit": [Function],
         },
@@ -134,26 +176,50 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "onChange": [Function],
-              "placeholder": "Enter a location",
-              "type": "text",
-              "value": "",
+              "children": Array [
+                <input
+                  onChange={[Function]}
+                  placeholder="Enter a location"
+                  type="text"
+                  value=""
+/>,
+                <button>
+                  search
+</button>,
+              ],
+              "className": "search",
             },
             "ref": null,
-            "rendered": null,
-            "type": "input",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "onChange": [Function],
+                  "placeholder": "Enter a location",
+                  "type": "text",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "search",
+                },
+                "ref": null,
+                "rendered": "search",
+                "type": "button",
+              },
+            ],
+            "type": "div",
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "search",
-            },
-            "ref": null,
-            "rendered": "search",
-            "type": "button",
-          },
+          false,
         ],
         "type": "form",
       },

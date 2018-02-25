@@ -29,12 +29,12 @@ export class Search extends Component {
     const { fetchApiEvents, setLocation, setArtistInLocation} = this.props;
     const location = localStorage.getItem('location');
     const favArtists = localStorage.getItem('favArtists');
-  
-    localStorage.location ?  
-      await fetchApiEvents(locationObj[location]) && setLocation(location)
-      : null;
-  
-    localStorage.favArtists ? await setArtistInLocation(JSON.parse(favArtists)) : null;  
+    
+    if (localStorage.location) {
+      await fetchApiEvents(locationObj[location]) && setLocation(location);
+    } else if (localStorage.favArtists) {
+      await setArtistInLocation(JSON.parse(favArtists));
+    }
   }
 
   inputHandler = (e) => {
@@ -50,7 +50,6 @@ export class Search extends Component {
   handleLocation = () => {
     const { inputVal } = this.state;
     const { setLocation } = this.props;
-    console.log(inputVal)
     const suggestedWords = this.searchComplete.suggest(inputVal);
 
     this.callFetch();
@@ -61,10 +60,10 @@ export class Search extends Component {
   submitHandler = async(e) => {
     e.preventDefault();
     const { match, setFavoriteArtists } = this.props;
-    await this.callFetch();
 
-    match.path === '/artists' ? await setFavoriteArtists() : null;
+    await this.callFetch();
     this.setLocalStorage();
+    match.path === '/artists' ? await setFavoriteArtists() : null;
     this.setState({
       inputVal: '',
       redirect: true
@@ -84,9 +83,7 @@ export class Search extends Component {
     
     match.path === '/artists' ?
       localStorage.setItem('favArtists', JSON.stringify(artistInLocation))
-      :
-      localStorage.setItem('location', location);
-
+      : localStorage.setItem('location', location);
   }
 
   render () {

@@ -2,18 +2,19 @@ import { cleanData, fetchEventApi } from './apiCall.js';
 import { mockEvent } from '../../mockData.js';
 
 describe('fetchApi', () => {
+  
   beforeEach(() => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       status: 200,
       json: () => Promise.resolve({
-        results: 'return results'
+        _embedded: 'return results'
       })
     }));
   });
 
   it('fetch gets called', async() => {
     expect(window.fetch).not.toHaveBeenCalled();
-    await cleanData();
+    await fetchEventApi();
     expect(window.fetch).toHaveBeenCalled();
   });
 
@@ -38,15 +39,14 @@ describe('fetchArtistApi', () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       status: 200,
       json: () => Promise.resolve({
-        results: mockEvent
+        _embedded: mockEvent
       })
     }));
   });
 
   it('fetch gets called', async() => {
-    expect(window.fetch).not.toHaveBeenCalled();
-    await cleanData();
-    expect(window.fetch).toHaveBeenCalled();
+    const data = await cleanData();
+    expect(typeof data).toEqual('object');
   });
 
 });
