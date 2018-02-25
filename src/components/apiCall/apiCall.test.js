@@ -22,7 +22,6 @@ describe('fetchApi', () => {
 
     expect(cleanData()).not.toHaveBeenCalled();
     window.fetch;
-   
     expect(cleanData()).toBeCalledWith(eventArray);
   });
 

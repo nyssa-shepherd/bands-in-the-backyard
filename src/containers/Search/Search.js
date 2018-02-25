@@ -44,7 +44,7 @@ export class Search extends Component {
     e.preventDefault();
     const { match, setFavoriteArtists } = this.props;
     await this.callFetch();
-    
+
     match.path === '/artists' ? await setFavoriteArtists() : null;
     this.setLocalStorage();
     this.setState({inputVal: ''});

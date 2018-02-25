@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,700');
+
+.default-page {
+  background-image: url('../../images/concert-home.jpg');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Oswald;
+  height: 100vh;
+}
+
+.title {
+  color: #fff;
+  display: inline;
+  font-size: 65px;
+  margin: 0 31%;
+}
+
+.in-the {
+  color: #fff; 
+  font-weight: 200;
+  font-size: 35px; 
+}
+
+.default-page form {
+  margin: 0 30%;
+  width: 540px;
+}
+
+.default-page input {
+  height: 40px;
+  width: 650px;
+}
+
+.default-page p {
+  color: rgb(84, 84, 84);  
+  font-size: 20px;
+  margin: 120px 30% 10px;
+}
+
+.default-page button {
+  height: 45px;
+  width: 150px;
+}
+

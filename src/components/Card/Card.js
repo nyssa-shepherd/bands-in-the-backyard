@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router';
 import './Card.css';
 
-const Card = ({name, city, state, date, time, venue, ticketUrl, image}) => {
-
+const Card = ({name, city, state, date, time, venue, type, ticketUrl, image}) => {
+  let cardtype;
+  type === 'artist-card' ? cardtype = 'artist-card' : cardtype = 'event-card';
+  
   return (
-    <div className='card'>
+    <div className={`card ${cardtype}`}>
       <img src={image} />
       <div className='card-text'>
         <h1 className='artist-name'>{name}</h1>
@@ -18,7 +21,7 @@ const Card = ({name, city, state, date, time, venue, ticketUrl, image}) => {
   );
 };
 
-export default Card;
+export default withRouter(Card);
 
 Card.propTypes = {
   name: PropTypes.string.isRequired,
