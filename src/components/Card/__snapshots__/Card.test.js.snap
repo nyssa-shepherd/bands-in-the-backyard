@@ -4,7 +4,7 @@ exports[`Card snapshot test 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Card />,
+  Symbol(enzyme.__unrendered__): <withRouter(Card) />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -15,303 +15,25 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "class",
     "props": Object {
-      "children": Array [
-        <img
-          src={undefined}
-/>,
-        <div
-          className="card-text"
->
-          <h1
-                    className="artist-name"
-          />
-          <h2
-                    className="location-name"
-          >
-                    , 
-          </h2>
-          <p>
-                     at 
-          </p>
-          <p />
-          <a
-                    href="{ticketurl}"
-          />
-</div>,
-      ],
-      "className": "card",
+      "render": [Function],
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "src": undefined,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "img",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <h1
-              className="artist-name"
-/>,
-            <h2
-              className="location-name"
->
-              , 
-</h2>,
-            <p>
-               at 
-</p>,
-            <p />,
-            <a
-              href="{ticketurl}"
-/>,
-          ],
-          "className": "card-text",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": undefined,
-              "className": "artist-name",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "h1",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                undefined,
-                ", ",
-                undefined,
-              ],
-              "className": "location-name",
-            },
-            "ref": null,
-            "rendered": Array [
-              undefined,
-              ", ",
-              undefined,
-            ],
-            "type": "h2",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                undefined,
-                " at ",
-                undefined,
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              undefined,
-              " at ",
-              undefined,
-            ],
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": undefined,
-              "href": "{ticketurl}",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "a",
-          },
-        ],
-        "type": "div",
-      },
-    ],
-    "type": "div",
+    "rendered": null,
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "class",
       "props": Object {
-        "children": Array [
-          <img
-            src={undefined}
-/>,
-          <div
-            className="card-text"
->
-            <h1
-                        className="artist-name"
-            />
-            <h2
-                        className="location-name"
-            >
-                        , 
-            </h2>
-            <p>
-                         at 
-            </p>
-            <p />
-            <a
-                        href="{ticketurl}"
-            />
-</div>,
-        ],
-        "className": "card",
+        "render": [Function],
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "src": undefined,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "img",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <h1
-                className="artist-name"
-/>,
-              <h2
-                className="location-name"
->
-                , 
-</h2>,
-              <p>
-                 at 
-</p>,
-              <p />,
-              <a
-                href="{ticketurl}"
-/>,
-            ],
-            "className": "card-text",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": undefined,
-                "className": "artist-name",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "h1",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  undefined,
-                  ", ",
-                  undefined,
-                ],
-                "className": "location-name",
-              },
-              "ref": null,
-              "rendered": Array [
-                undefined,
-                ", ",
-                undefined,
-              ],
-              "type": "h2",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  undefined,
-                  " at ",
-                  undefined,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                undefined,
-                " at ",
-                undefined,
-              ],
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": undefined,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": undefined,
-                "href": "{ticketurl}",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "a",
-            },
-          ],
-          "type": "div",
-        },
-      ],
-      "type": "div",
+      "rendered": null,
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

@@ -22,7 +22,14 @@ describe('Search', () => {
   it('default state values', () => {
     expect(wrapper.state().inputVal).toEqual('');
     expect(wrapper.state().favArtists).toEqual([]);
+    expect(wrapper.state().redirect).toEqual(false);
+    expect(wrapper.state().suggestedWords).toEqual([]);
   });
+
+  // it('callFetch', () => {
+  //   wrapper.instance().callFetch();
+  //   expect(wrapper.props.fetchAritst()).toHaveBeenCalled();
+  // });
 
   it('map the store correctly', () => {
     const artist = {
