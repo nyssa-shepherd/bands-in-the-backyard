@@ -8,13 +8,12 @@ header {
     display: flex;
     font-family: Oswald;
     justify-content: space-between;
-    height: 390px;
-    margin-bottom: 40px;
+    height: 400px;
     width: 100%;
 }
 
 .above-header {
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 .show {
@@ -22,9 +21,11 @@ header {
 }
 
 .above-header {
+    background-color: #fefffa;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 5px;
 }
 
 .above-header h1 {
@@ -32,7 +33,6 @@ header {
     display: inline;
     font-size: 35px;
     padding: 5px 0 0 20px;
-    margin: 10px 0 15px;
 }
 
 span {

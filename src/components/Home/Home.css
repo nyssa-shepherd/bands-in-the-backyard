@@ -1,9 +1,10 @@
 .home-page {
-    background-color: #fff;
+    background-color: #fefffa;
     left: 35%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 40px;
     top: 220px;
     width: fit-content;
 }

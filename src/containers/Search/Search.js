@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter, Redirect, Route } from 'react-router';
+import { withRouter, Redirect } from 'react-router';
 import PropTypes from 'prop-types';
 import './Search.css';
 import { Trie } from '@rvwatch/completeMe';
@@ -10,7 +10,6 @@ import {
   fetchArtist, 
   setArtistInLocation } from '../../actions/actions.js';
 import locationObj from '../../locationObject.js';
-
 
 export class Search extends Component {
   constructor () {
