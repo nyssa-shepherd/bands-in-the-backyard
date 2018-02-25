@@ -3,7 +3,6 @@ import { NavLink, Route } from 'react-router-dom';
 import Home from '../Home/Home.js';
 import Artists from '../../containers/Artists/Artists.js';
 import './Header.css';
-import Search from '../../containers/Search/Search.js';
 
 const Header = () => {
   return (
@@ -26,7 +25,6 @@ const Header = () => {
         </div>
       </div>
       <header>
-        <Search />
       </header>
       <div>
         <Route exact path='/home' component={Home} />

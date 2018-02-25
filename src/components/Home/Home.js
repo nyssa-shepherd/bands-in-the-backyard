@@ -6,6 +6,7 @@ import './Home.css';
 const Home = () => {
   return (
     <div className='home-page'>
+      <Search />
       <div className='home-header'>
         <h2>UPCOMING NEAR YOU</h2>
       </div>

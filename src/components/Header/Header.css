@@ -8,31 +8,12 @@ header {
     display: flex;
     font-family: Oswald;
     justify-content: space-between;
-    height: 390px;
-    margin-bottom: 40px;
+    height: 400px;
     width: 100%;
 }
 
 .above-header {
-    margin-bottom: 10px;
-}
-
-header form {
-    margin: 120px 80%;
-    width: 300%;
-}
-
-header input {
-    border-radius: 5px;
-    font-size:24px;
-    height: 40px;
-}
-
-header button {
-    background-color: rgba(4, 82, 80, 0.607);
-    border-radius: 5px;
-    height: 45px;
-    width: 90px;
+    padding-bottom: 10px;
 }
 
 .show {
@@ -40,9 +21,11 @@ header button {
 }
 
 .above-header {
+    background-color: #fefffa;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 5px;
 }
 
 .above-header h1 {
@@ -50,7 +33,6 @@ header button {
     display: inline;
     font-size: 35px;
     padding: 5px 0 0 20px;
-    margin: 10px 0 15px;
 }
 
 span {
