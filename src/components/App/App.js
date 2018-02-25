@@ -7,7 +7,7 @@ import './App.css';
 
 class App extends Component {  
   render() {
-    localStorage.location ? <Redirect to='/home' /> : <Redirect to='/' />;
+    //localStorage.location ? <Redirect to='/home' /> : <Redirect to='/' />;
     return (
       <div className="App">
         {

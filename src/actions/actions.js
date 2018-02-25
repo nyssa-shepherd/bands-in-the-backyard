@@ -20,6 +20,7 @@ export const fetchArtist = (artistName) => async (dispatch) => {
   return dispatch(addArtist(artists));
 };
 
+
 export const addArtist = allArtistsEvents => ({
   type: 'ADD_ARTIST',
   allArtistsEvents

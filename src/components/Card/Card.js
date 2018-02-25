@@ -14,8 +14,8 @@ const Card = ({name, city, state, date, time, venue, type, ticketUrl, image}) =>
         <h1 className='artist-name'>{name}</h1>
         <h2 className='location-name'>{city}, {state}</h2>
         <p>{date} at {time}</p>
-        <p>{venue}</p>
-        <a href='{ticketurl}'>{ticketUrl}</a>
+        <p>Venue: {venue}</p>
+        <p>Get tickets: <a href={ticketUrl}>{ticketUrl}</a></p>
       </div>
     </div>
   );

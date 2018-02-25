@@ -1,5 +1,6 @@
 .card {
   background-color: white;
+  box-shadow: 5px 5px 5px rgba(135, 135, 135, 0.586);
   height: 440px;
   margin: 10px;
   width: 300px;
@@ -8,7 +9,7 @@
 .artist-card {
   border: none;
   border-bottom: 1px solid black;
-  height: 180px; 
+  height: 240px; 
   margin-left: 30%;
   width: 40%;
 }
@@ -27,14 +28,13 @@
 }
 
 .artist-name {
-  color: #1a3c3e;
+  color: #1e4547;
   font-size: 18px;
-  text-align: justify;
-
+  padding-bottom: 10px;
 }
 
 .location-name {
-  color: #a52e1eb0;
+  color: #1a3c3eb3;
   font-size: 15px;
   padding-bottom: 0;
 }
@@ -45,12 +45,16 @@ img {
 }
 
 p {
-  color:#111;
+  color:#1a3c3eb3;
 }
 
 a {
-  color: #111;
+  color: #1a3c3eb3;
   font-size: 12px;
   text-align: justify;
+}
+
+a:hover {
+  color: #4bbfc3;
 }
 

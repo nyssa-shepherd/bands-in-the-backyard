@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router';
+import { withRouter, Redirect, Route } from 'react-router';
+import Home from '../../components/Home/Home.js';
 import PropTypes from 'prop-types';
+import { Trie } from '@rvwatch/completeMe';
 import { 
   setLocation, 
   fetchApiEvents, 
@@ -15,15 +17,20 @@ export class Search extends Component {
     super();
     this.state = {
       inputVal: '',
-      favArtists: []
+      favArtists: [],
+      suggestedWords: [],
+      redirect: false
     };
+
+    this.searchComplete = new Trie();
+    this.searchComplete.populate(Object.keys(locationObj));
   }
 
   componentDidMount = async() => {
     const { fetchApiEvents, setLocation, setArtistInLocation} = this.props;
     const location = localStorage.getItem('location');
     const favArtists = localStorage.getItem('favArtists');
-
+  
     localStorage.location ?  
       await fetchApiEvents(locationObj[location]) && setLocation(location)
       : null;
@@ -35,19 +42,25 @@ export class Search extends Component {
     const inputVal = e.target.value;
     const { match, setLocation } = this.props;
 
-    this.setState({inputVal});
+    this.setState({
+      //suggestedWords: this.searchComplete.suggest(inputVal),
+      inputVal
+    });
     match.path === '/' ? 
       setLocation(inputVal) && this.callFetch() : null;
   }
 
   submitHandler = async(e) => {
     e.preventDefault();
-    const { match, setFavoriteArtists } = this.props;
+    const { path } = this.props.match;
     await this.callFetch();
 
-    match.path === '/artists' ? await setFavoriteArtists() : null;
+    path === '/artists' ? await this.setFavoriteArtists() : null;
     this.setLocalStorage();
-    this.setState({inputVal: ''});
+    this.setState({
+      inputVal: '',
+      redirect: true
+    });
   }
 
   callFetch = async() => {
@@ -56,6 +69,17 @@ export class Search extends Component {
     
     return match.path === '/' ?
       await fetchApiEvents(locationObj[location]) : await fetchArtist(inputVal);
+  }
+
+  setFavoriteArtists = async() => {
+    const { location, allArtistEvents, setArtistInLocation } = this.props;
+    const splitLocation = location.split(', ');
+
+    let matchLocation = await allArtistEvents.filter(artist => {
+      return artist.state === splitLocation[1];
+    });
+ 
+    setArtistInLocation(matchLocation);
   }
 
   setLocalStorage = () => {
@@ -68,6 +92,13 @@ export class Search extends Component {
   }
 
   render () {
+    const { redirect } = this.state;
+    const { path } = this.props.match;
+
+    if (redirect === true && path !== '/artists') {
+      return <Redirect to='/home' />; 
+    }
+    
     return (
       <div>
         <form onSubmit={(e) => this.submitHandler(e)}>
@@ -77,6 +108,14 @@ export class Search extends Component {
             placeholder='Enter a location'
             value={this.state.inputVal}
           />
+            {/* <datalist id="suggestions">
+              {
+                this.state.suggestedWords.slice(0, 5).map(word => {
+                  return (<option value={word}>hi</option>);
+                })
+              }
+            </datalist> */}
+          
           <button>search</button>
         </form>
       </div>
