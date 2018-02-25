@@ -39,19 +39,23 @@ export class Search extends Component {
 
   inputHandler = (e) => {
     const inputVal = e.target.value;
-    const { match, setLocation } = this.props;
-  
-    const suggestedWords = match.path !== '/artists' ?
-      this.searchComplete.suggest(inputVal)
-      : null;
-     console.log(suggestedWords); 
-    this.setState({
-      suggestedWords,
-      inputVal
-    });
+    const { path } = this.props.match;
 
-    match.path !== '/artists' ? 
-      setLocation(inputVal) && this.callFetch() : null;
+    this.setState({inputVal}, () => {
+      path !== '/artists' ? 
+        this.handleLocation()  : null;
+    });
+  }
+
+  handleLocation = () => {
+    const { inputVal } = this.state;
+    const { setLocation } = this.props;
+    console.log(inputVal)
+    const suggestedWords = this.searchComplete.suggest(inputVal);
+
+    this.callFetch();
+    setLocation(inputVal);
+    this.setState({suggestedWords});
   }
 
   submitHandler = async(e) => {
