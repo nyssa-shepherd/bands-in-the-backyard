@@ -40,7 +40,10 @@ export class Search extends Component {
     const inputVal = e.target.value;
     const { match, setLocation } = this.props;
 
-    this.setState({inputVal});
+    this.setState({
+      suggestedWords: this.searchComplete.suggest(inputVal),
+      inputVal
+    });
     match.path === '/' ? 
       setLocation(inputVal) && this.callFetch() : null;
   }
@@ -82,6 +85,16 @@ export class Search extends Component {
             placeholder='Enter a location'
             value={this.state.inputVal}
           />
+          
+            <datalist id="suggestions">
+              {
+                this.state.suggestedWords.slice(0, 5).map(word => {
+                  return (<option value={word}>hi</option>);
+                })
+              }
+          
+            </datalist>
+          
           <button>search</button>
         </form>
       </div>
