@@ -6,10 +6,21 @@ import Search from '../../containers/Search/Search.js';
 import './Artists.css';
 
 export class Artists extends Component {
+  setFavoriteArtists = async() => {
+    const { location, allArtistEvents, setArtistInLocation } = this.props;
+    const splitLocation = location.split(', ');
+
+    let matchLocation = await allArtistEvents.filter(artist => {
+      return artist.state === splitLocation[1];
+    });
+ 
+    setArtistInLocation(matchLocation);
+  }
+
   render () {  
     return (
       <div className='artist-page'>
-        <Search />
+        <Search setFavoriteArtists={this.setFavoriteArtists}/>
         <CardContainer />
       </div>
     );
