@@ -1,28 +1,20 @@
-import { cleanData } from './apiCall.js';
+import { cleanData, fetchEventApi } from './apiCall.js';
+import { mockEvent } from '../../mockData.js';
 
 describe('fetchApi', () => {
-
-  it('fetch gets called', () => {
-    const eventArray = [{
-      image: 'url',
-      name: 'name',
-      city: 'city',
-      state: 'state',
-      venue: 'venue',
-      ticketUrl: 'url',
-      uselessData: 'blah'
-    }];
-
+  beforeEach(() => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       status: 200,
       json: () => Promise.resolve({
-        results: eventArray
+        results: 'return results'
       })
     }));
+  });
 
-    expect(cleanData()).not.toHaveBeenCalled();
-    window.fetch;
-    expect(cleanData()).toBeCalledWith(eventArray);
+  it('fetch gets called', async() => {
+    expect(window.fetch).not.toHaveBeenCalled();
+    await cleanData();
+    expect(window.fetch).toHaveBeenCalled();
   });
 
   it('should throw the error when catch is hit in the Promise', async () => {
@@ -36,6 +28,25 @@ describe('fetchApi', () => {
     } catch (err) {
       expect(err).toEqual(expectedError);
     }
+  });
+
+});
+
+describe('fetchArtistApi', () => {
+
+  beforeEach(() => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      status: 200,
+      json: () => Promise.resolve({
+        results: mockEvent
+      })
+    }));
+  });
+
+  it('fetch gets called', async() => {
+    expect(window.fetch).not.toHaveBeenCalled();
+    await cleanData();
+    expect(window.fetch).toHaveBeenCalled();
   });
 
 });

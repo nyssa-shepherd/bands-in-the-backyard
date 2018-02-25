@@ -1,7 +1,7 @@
-import { fetchEventApi, fetchArtistApi } from '../components/apiCall/apiCall.js';
+import { cleanData, fetchArtistApi } from '../components/apiCall/apiCall.js';
 
 export const fetchApiEvents = (locationKey) => async (dispatch) => {
-  const events = await fetchEventApi(locationKey);
+  const events = await cleanData(locationKey);
   return dispatch(addEvents(events));
 };
 
