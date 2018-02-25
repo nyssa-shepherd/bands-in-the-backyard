@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
+import { Trie } from '@rvwatch/completeMe';
 import { 
   setLocation, 
   fetchApiEvents, 
@@ -15,15 +16,19 @@ export class Search extends Component {
     super();
     this.state = {
       inputVal: '',
-      favArtists: []
+      favArtists: [],
+      suggestedWords: []
     };
+
+    this.searchComplete = new Trie();
+    this.searchComplete.populate(Object.keys(locationObj));
   }
 
   componentDidMount = async() => {
     const { fetchApiEvents, setLocation, setArtistInLocation} = this.props;
     const location = localStorage.getItem('location');
     const favArtists = localStorage.getItem('favArtists');
-
+  
     localStorage.location ?  
       await fetchApiEvents(locationObj[location]) && setLocation(location)
       : null;
