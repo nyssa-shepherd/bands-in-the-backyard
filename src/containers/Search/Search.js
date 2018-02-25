@@ -98,7 +98,7 @@ export class Search extends Component {
             placeholder='Enter a location'
             value={this.state.inputVal}
           />
-            {/* <datalist id="suggestions">
+          {/* <datalist id="suggestions">
               {
                 this.state.suggestedWords.slice(0, 5).map(word => {
                   return (<option value={word}>hi</option>);
