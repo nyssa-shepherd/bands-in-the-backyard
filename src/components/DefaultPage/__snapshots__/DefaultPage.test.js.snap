@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefaultPage snapshot test 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DefaultPage />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1
+          className="title"
+>
+          Bands
+          <span
+                    className="in-the"
+          >
+                    in the
+          </span>
+          Backyard
+</h1>,
+        <p>
+          Enter your location to see upcoming concets near you.
+</p>,
+        <withRouter(Connect(Search)) />,
+      ],
+      "className": "default-page",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Bands",
+            <span
+              className="in-the"
+>
+              in the
+</span>,
+            "Backyard",
+          ],
+          "className": "title",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Bands",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "in the",
+              "className": "in-the",
+            },
+            "ref": null,
+            "rendered": "in the",
+            "type": "span",
+          },
+          "Backyard",
+        ],
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Enter your location to see upcoming concets near you.",
+        },
+        "ref": null,
+        "rendered": "Enter your location to see upcoming concets near you.",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1
+            className="title"
+>
+            Bands
+            <span
+                        className="in-the"
+            >
+                        in the
+            </span>
+            Backyard
+</h1>,
+          <p>
+            Enter your location to see upcoming concets near you.
+</p>,
+          <withRouter(Connect(Search)) />,
+        ],
+        "className": "default-page",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Bands",
+              <span
+                className="in-the"
+>
+                in the
+</span>,
+              "Backyard",
+            ],
+            "className": "title",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Bands",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "in the",
+                "className": "in-the",
+              },
+              "ref": null,
+              "rendered": "in the",
+              "type": "span",
+            },
+            "Backyard",
+          ],
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Enter your location to see upcoming concets near you.",
+          },
+          "ref": null,
+          "rendered": "Enter your location to see upcoming concets near you.",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
