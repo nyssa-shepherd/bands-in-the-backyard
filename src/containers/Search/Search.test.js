@@ -8,11 +8,11 @@ import {
 describe('Search', () => {
   let wrapper;
   let mockMatch;
-
+  const mockEvent = {target: {value: 'text'}};
 
   beforeEach(() => {
     mockMatch = {path: '/artists'};
-    wrapper = shallow(<Search match={mockMatch}/>);
+    wrapper = shallow(<Search match={mockMatch} />);
   });
 
   it('snapshot test', () => {
@@ -26,10 +26,10 @@ describe('Search', () => {
     expect(wrapper.state().suggestedWords).toEqual([]);
   });
 
-  // it('callFetch', () => {
-  //   wrapper.instance().callFetch();
-  //   expect(wrapper.props.fetchAritst()).toHaveBeenCalled();
-  // });
+  it('update input state when inputHandler is called', () => {
+    wrapper.instance().inputHandler(mockEvent);
+    expect(wrapper.state().inputVal).toEqual(mockEvent.target.value);
+  });
 
   it('map the store correctly', () => {
     const artist = {
