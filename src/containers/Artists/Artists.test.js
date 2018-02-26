@@ -3,10 +3,29 @@ import { shallow } from 'enzyme';
 import { Artists, mapStateToProps, mapDispatchToProps } from './Artists.js';
 
 describe('Artists', () => {
+  let mockLocation;
+  let mockAllArtistEvents;
+
+  beforeEach(() => {
+    mockLocation = 'Denver, CO';
+    mockAllArtistEvents = [];
+  });
 
   it('snapshot test', () => {
     const wrapper = shallow(<Artists />);
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('default state', () => {
+    const wrapper = shallow(<Artists />);
+    expect(wrapper.state().noArtistMessage).toEqual('');
+  });
+
+  it('update state', () => {
+    const wrapper = shallow(<Artists location={mockLocation} allArtistEvents={mockAllArtistEvents}/>);
+
+    wrapper.instance().setFavoriteArtists();
+    expect(wrapper.state().noArtistMessage).toEqual('');
   });
 
   it('map the store correctly', () => {
