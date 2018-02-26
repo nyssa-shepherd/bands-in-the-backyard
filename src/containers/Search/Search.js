@@ -30,10 +30,10 @@ export class Search extends Component {
     const location = localStorage.getItem('location');
     const favArtists = localStorage.getItem('favArtists');
     
-    localStorage ?
-      await fetchApiEvents(locationObj[location]) && setLocation(location) &&
-      await setArtistInLocation(JSON.parse(favArtists)) 
-      : null;
+    //localStorage ?
+      //await fetchApiEvents(locationObj[location]) && setLocation(location) &&
+      //await setArtistInLocation(JSON.parse(favArtists)) 
+      //: null;
   }
 
   inputHandler = (e) => {

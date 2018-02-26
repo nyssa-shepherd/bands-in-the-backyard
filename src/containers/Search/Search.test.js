@@ -4,6 +4,7 @@ import {
   Search, 
   mapStateToProps, 
   mapDispatchToProps} from './Search.js';
+import { fetchApiEvents } from '../../components/apiCall/apiCall.js';
 
 describe('Search', () => {
   let wrapper;
@@ -35,6 +36,12 @@ describe('Search', () => {
     mockMatch = {path: '/home'};
     wrapper.instance().inputHandler(mockEvent);
     expect(wrapper.instance().handleLocation()).toHaveBeenCalled();
+  });
+
+  it('setLocalStorage', () => {
+    const expected = {'favArtists': 'artist'};
+    window.localStorage.setItem('favArtists', 'artist');
+    expect(window.localStorage).toEqual(expected);
   });
 
   it('map the store correctly', () => {
