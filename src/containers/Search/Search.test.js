@@ -4,6 +4,7 @@ import {
   Search, 
   mapStateToProps, 
   mapDispatchToProps} from './Search.js';
+import { fetchApiEvents } from '../../components/apiCall/apiCall.js';
 
 describe('Search', () => {
   let wrapper;
@@ -12,7 +13,11 @@ describe('Search', () => {
 
   beforeEach(() => {
     mockMatch = {path: '/artists'};
-    wrapper = shallow(<Search match={mockMatch} />);
+    wrapper = shallow(<Search 
+      match={mockMatch} 
+      fetchApiEvents={jest.fn()} 
+      fetchArtist={jest.fn()}
+      setFavoriteArtists={jest.fn()}/>);
   });
 
   it('snapshot test', () => {
@@ -35,6 +40,20 @@ describe('Search', () => {
     mockMatch = {path: '/home'};
     wrapper.instance().inputHandler(mockEvent);
     expect(wrapper.instance().handleLocation()).toHaveBeenCalled();
+  });
+
+  it('submitHandler', () => {
+    mockEvent.preventDefault = jest.fn();
+    wrapper.instance().submitHandler(mockEvent);
+    expect(wrapper.state().inputVal).toEqual('');
+    expect(wrapper.state().redirect).toBeTrue;
+  });
+
+  it('setLocalStorage', () => {
+    const expected = {'favArtists': 'artist'};
+    wrapper.instance().setLocalStorage();
+    window.localStorage.setItem('favArtists', 'artist');
+    expect(window.localStorage).toEqual(expected);
   });
 
   it('map the store correctly', () => {
