@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,700');
 
 .default-page {
+  align-items: center;
   background-image: url('../../images/concert-home.jpg');
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
   font-family: Oswald;
   height: 100vh;
 }
@@ -13,7 +16,7 @@
   color: rgb(105, 105, 105);
   display: inline;
   font-size: 65px;
-  margin: 0 31%;
+  /* margin: 0 31%; */
 }
 
 .in-the {
@@ -24,7 +27,7 @@
 
 .default-page form {
   top: 270px;
-  left: 20%;
+  left: 22%;
   width: 60%;
 }
 
@@ -36,8 +39,9 @@
 
 .default-page p {
   color: rgb(84, 84, 84);  
-  font-size: 23px;
-  margin: 120px 31% 10px;
+  font-size: 24.5px;
+  margin-top: 120px;
+  width: 100%;
 }
 
 .default-page button {
@@ -46,3 +50,74 @@
   width: 150px;
 }
 
+ @media (max-width: 950px) {
+
+  .default-page p {
+    margin-left: 4%;
+  }
+/* 
+  .title {
+    margin: 0 28%;
+  } */
+
+}
+
+@media (max-width: 790px) {
+
+  .default-page form {
+    left: 21%;
+  }
+  
+}
+
+@media (max-width: 765px) {
+
+  .default-page form {
+    left: 19%;
+  }
+  
+}
+
+@media (max-width: 710px) {
+
+  .default-page form {
+    left: 16%;
+  }
+  
+}
+
+@media (max-width: 640px) {
+
+  .default-page form {
+    left: 14%;
+  }
+  
+}
+
+@media (max-width: 610px) {
+
+  .default-page form {
+    left: 11%;
+  }
+  
+}
+
+@media (max-width: 555px) {
+
+  .default-page form {
+    left: 7%;
+  }
+
+  .default-page p {
+    margin-left: 1%;
+  }
+  
+}
+
+@media (max-width: 535px) {
+
+  .default-page form {
+    left: 4%;
+  }
+  
+}
