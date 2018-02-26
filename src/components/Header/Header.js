@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, Route } from 'react-router-dom';
-import Home from '../Home/Home.js';
+import Home from '../../containers/Home/Home.js';
 import Artists from '../../containers/Artists/Artists.js';
 import './Header.css';
 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Search from '../../containers/Search/Search.js';
-import CardContainer from '../../containers/CardContainer/CardContainer.js';
+import Search from '../Search/Search.js';
+import CardContainer from '../CardContainer/CardContainer.js';
 import './Home.css';
 
 export class Home extends Component {
