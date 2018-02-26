@@ -1,20 +1,35 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Search from '../../containers/Search/Search.js';
 import CardContainer from '../../containers/CardContainer/CardContainer.js';
 import './Home.css';
 
-const Home = () => {
-  return (
-    <div className='home-page'>
-      <Search />
-      <div className='home-header'>
-        <h2>UPCOMING NEAR YOU</h2>
-      </div>
-      <div className='cards'>
-        <CardContainer />
-      </div>
-    </div>
-  );
-};
+class Home extends Component {
+  render () {
+    let { location } = this.props;
+    location = location.toUpperCase();
 
-export default Home;
+    return (
+      <div className='home-page'>
+        <Search />
+        <div className='home-header'>
+          <h2>UPCOMING NEAR {location}</h2>
+        </div>
+        <div className='cards'>
+          <CardContainer />
+        </div>
+      </div>
+    );
+  }
+}
+
+export const mapStateToProps = store => ({
+  location: store.location
+}); 
+
+export default connect(mapStateToProps)(Home);
+
+Home.propTypes = {
+  location: PropTypes.string.isRequired
+};
