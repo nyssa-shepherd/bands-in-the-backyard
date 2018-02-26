@@ -11,7 +11,9 @@ const Card = ({
   
   return (
     <div className={`card ${cardtype}`}>
-      <img src={image} />
+      <div>
+        <img src={image} />
+      </div>
       <div className='card-text'>
         <h1 className='artist-name'>{name}</h1>
         <h2 className='location-name'>{city}, {state}</h2>

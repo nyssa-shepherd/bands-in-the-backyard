@@ -12,6 +12,7 @@ export class CardContainer extends Component {
     this.props.match.path === '/artists' ? 
       rendered = this.props.artistInLocation.map((artist, i) => {
         return <Card
+          image={artist.pic}
           name={artist.name}
           city={artist.city}
           state={artist.state}

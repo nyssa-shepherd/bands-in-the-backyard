@@ -107,7 +107,7 @@ export class Search extends Component {
             <button>search</button>
           </div>
           {
-            path !== '/artists' &&
+            path !== '/artists' && inputVal !== '' &&
             <div className='list'>
               <datalist id="suggestions">
                 {
