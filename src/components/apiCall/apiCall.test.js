@@ -1,4 +1,4 @@
-import { cleanData, fetchEventApi, fetchArtistApi, cleanArtistData } from './apiCall.js';
+import { cleanData, fetchEventApi, fetchArtistApi, cleanArtistData, fetchArtistPic } from './apiCall.js';
 import { mockEvent, mockArtist } from '../../mockData.js';
 
 describe('fetchApi', () => {
@@ -58,6 +58,38 @@ describe('fetchArtistApi', () => {
   it('cleaner function returns an object', async() => {
     const data = await cleanArtistData(mockArtist);
     expect(typeof data).toEqual('object');
+  });
+
+  it('should throw the error when catch is hit in the Promise', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.reject({
+      status: 404
+    }));
+    const expectedError = Error('error');
+    
+    try {
+      window.fetch;
+    } catch (err) {
+      expect(err).toEqual(expectedError);
+    }
+  });
+
+});
+
+describe('fetchArtistPic', () => {
+
+  beforeEach(() => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      status: 200,
+      json: () => Promise.resolve({
+        data: mockArtist
+      })
+    }));
+  });
+
+  it('fetch gets called', async() => {
+    expect(window.fetch).not.toHaveBeenCalled();
+    await fetchArtistPic();
+    expect(window.fetch).toHaveBeenCalled();
   });
 
   it('should throw the error when catch is hit in the Promise', async () => {
