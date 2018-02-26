@@ -1,7 +1,7 @@
 export const eventReducer = (state = [], action) => {
   switch (action.type) {
   case 'ADD_EVENTS':
-    return [...state, ...action.events];
+    return [...action.events];
   default:
     return state;
   }
