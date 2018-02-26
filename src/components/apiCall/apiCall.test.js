@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { cleanData, fetchEventApi, fetchArtistApi, cleanArtistData, fetchArtistPic } from './apiCall.js';
 import { mockEvent, mockArtist } from '../../mockData.js';
 
