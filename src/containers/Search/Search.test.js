@@ -1,10 +1,10 @@
+/* eslint-disable */
 import React from 'react';
 import { shallow } from 'enzyme';
 import {
   Search, 
   mapStateToProps, 
   mapDispatchToProps} from './Search.js';
-import { fetchApiEvents } from '../../components/apiCall/apiCall.js';
 
 describe('Search', () => {
   let wrapper;
