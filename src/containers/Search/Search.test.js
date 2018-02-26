@@ -31,6 +31,12 @@ describe('Search', () => {
     expect(wrapper.state().inputVal).toEqual(mockEvent.target.value);
   });
 
+  it('calls handleLocation after inputHandler has been called', () => {
+    mockMatch = {path: '/home'};
+    wrapper.instance().inputHandler(mockEvent);
+    expect(wrapper.instance().handleLocation()).toHaveBeenCalled();
+  });
+
   it('map the store correctly', () => {
     const artist = {
       key: 8,
