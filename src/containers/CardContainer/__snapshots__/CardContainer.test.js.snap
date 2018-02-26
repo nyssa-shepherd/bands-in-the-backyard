@@ -39,6 +39,7 @@ ShallowWrapper {
         <withRouter(Card)
           city="city"
           date="date"
+          image={undefined}
           name="name"
           state="state"
           ticketUrl="url"
@@ -57,6 +58,7 @@ ShallowWrapper {
         "props": Object {
           "city": "city",
           "date": "date",
+          "image": undefined,
           "name": "name",
           "state": "state",
           "ticketUrl": "url",
@@ -80,6 +82,7 @@ ShallowWrapper {
           <withRouter(Card)
             city="city"
             date="date"
+            image={undefined}
             name="name"
             state="state"
             ticketUrl="url"
@@ -98,6 +101,7 @@ ShallowWrapper {
           "props": Object {
             "city": "city",
             "date": "date",
+            "image": undefined,
             "name": "name",
             "state": "state",
             "ticketUrl": "url",
