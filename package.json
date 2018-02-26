@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@rvwatch/completeMe": "git+https://github.com/rvwatch/completeMe.git",
-    "TDD/lib": "git+https://github.com/nyssakeller/Complete-Me.git",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "prop-types": "^15.6.0",
