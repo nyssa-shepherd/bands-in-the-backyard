@@ -4,7 +4,9 @@ exports[`Home snapshot test 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Home />,
+  Symbol(enzyme.__unrendered__): <Home
+    location="Denver, CO"
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -23,7 +25,8 @@ ShallowWrapper {
           className="home-header"
 >
           <h2>
-                    UPCOMING NEAR YOU
+                    UPCOMING NEAR 
+                    DENVER, CO
           </h2>
 </div>,
         <div
@@ -51,7 +54,8 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <h2>
-            UPCOMING NEAR YOU
+            UPCOMING NEAR 
+            DENVER, CO
 </h2>,
           "className": "home-header",
         },
@@ -61,10 +65,16 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "UPCOMING NEAR YOU",
+            "children": Array [
+              "UPCOMING NEAR ",
+              "DENVER, CO",
+            ],
           },
           "ref": null,
-          "rendered": "UPCOMING NEAR YOU",
+          "rendered": Array [
+            "UPCOMING NEAR ",
+            "DENVER, CO",
+          ],
           "type": "h2",
         },
         "type": "div",
@@ -104,7 +114,8 @@ ShallowWrapper {
             className="home-header"
 >
             <h2>
-                        UPCOMING NEAR YOU
+                        UPCOMING NEAR 
+                        DENVER, CO
             </h2>
 </div>,
           <div
@@ -132,7 +143,8 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <h2>
-              UPCOMING NEAR YOU
+              UPCOMING NEAR 
+              DENVER, CO
 </h2>,
             "className": "home-header",
           },
@@ -142,10 +154,16 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "UPCOMING NEAR YOU",
+              "children": Array [
+                "UPCOMING NEAR ",
+                "DENVER, CO",
+              ],
             },
             "ref": null,
-            "rendered": "UPCOMING NEAR YOU",
+            "rendered": Array [
+              "UPCOMING NEAR ",
+              "DENVER, CO",
+            ],
             "type": "h2",
           },
           "type": "div",

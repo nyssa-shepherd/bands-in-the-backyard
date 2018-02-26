@@ -5,7 +5,7 @@ import Search from '../../containers/Search/Search.js';
 import CardContainer from '../../containers/CardContainer/CardContainer.js';
 import './Home.css';
 
-class Home extends Component {
+export class Home extends Component {
   render () {
     let { location } = this.props;
     location = location.toUpperCase();
