@@ -40,6 +40,7 @@ describe('Search', () => {
 
   it('setLocalStorage', () => {
     const expected = {'favArtists': 'artist'};
+    wrapper.instance().setLocalStorage();
     window.localStorage.setItem('favArtists', 'artist');
     expect(window.localStorage).toEqual(expected);
   });
