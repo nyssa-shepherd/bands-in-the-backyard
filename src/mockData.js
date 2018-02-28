@@ -1,114 +1,6 @@
-export const mockEvent = {
-  "events":[{"name":"Elton John: Farewell Yellow Brick Road",
-    "type":"event",
-    "id":"G5vzZfMDxs8MQ",
-    "test":false,
-    "url":"http://www.ticketmaster.com/elton-john-farewell-yellow-brick-road-boise-idaho-01-11-2019/event/1E00537EE2C50DDA",
-    "locale":"en-us",
-    "images":[{
-      "ratio":"4_3",
-      "url":"https://s1.ticketm.net/dam/a/12f/9ddad6da-104d-4b7a-bedb-698a9087012f_621881_CUSTOM.jpg",
-      "width":305,
-      "height":225,
-      "fallback":false
-    },
-    {
-      "ratio":"16_9",
-      "url":"https://s1.ticketm.net/dam/a/12f/9ddad6da-104d-4b7a-bedb-698a9087012f_621881_TABLET_LANDSCAPE_16_9.jpg",
-      "width":1024,
-      "height":576,
-      "fallback":false
-    },
-    {
-      "ratio":"16_9",
-      "url":"https://s1.ticketm.net/dam/a/12f/9ddad6da-104d-4b7a-bedb-698a9087012f_621881_RETINA_PORTRAIT_16_9.jpg",
-      "width":640,
-      "height":360,
-      "fallback":false
-    }],
-    "sales": {
-      "public":{
-        "startDateTime":"2018-02-02T17:00:00Z",
-        "startTBD":false,
-        "endDateTime":"2019-01-12T03:00:00Z"
-      },
-      "presales":[
-        {
-          "startDateTime":"2018-01-25T17:00:00Z",
-          "endDateTime":"2018-01-30T05:00:00Z",
-          "name":"American Express® Card Member Presale"
-        },
-        {
-          "startDateTime":"2018-01-25T15:00:00Z",
-          "endDateTime":"2018-01-25T17:00:00Z",
-          "name":"Rocket Club VIP Member Presale"
-        },
-        {
-          "startDateTime":"2018-01-30T17:00:00Z",
-          "endDateTime":"2018-02-01T05:00:00Z",
-          "name":"Verified Fan Presale"
-        }
-      ]
-    },
-    "dates": {
-      "start":{
-        "localDate":"2019-01-11",
-        "localTime":"20:00:00",
-        "dateTime":"2019-01-12T03:00:00Z",
-        "dateTBD":false,
-        "dateTBA":false,
-        "timeTBA":false,
-        "noSpecificTime":false
-      },
-      "timezone":"America/Denver",
-      "status":{
-        "code":"onsale"
-      },
-      "spanMultipleDays":false
-    },
-    "_links": {
-      "self": {
-        "href":"/discovery/v2/events/G5vzZfMDxs8MQ?locale=en-us"
-      },
-      "attractions":[
-        {"href":"/discovery/v2/attractions/K8vZ9171G-7?locale=en-us"}
-      ],
-      "venues":[{"href":"/discovery/v2/venues/KovZpZAEetIA?locale=en-us"}]
-    },
-    "_embedded":{
-      "venues":[{
-        "name":"Taco Bell Arena",
-        "type":"venue",
-        "id":"KovZpZAEetIA",
-        "test":false,
-        "url":"http://www.ticketmaster.com/taco-bell-arena-tickets-boise/venue/246824",
-        "locale":"en-us",
-        "images":[{
-          "ratio":"16_9",
-          "url":"https://s1.ticketm.net/dbimages/17330v.jpg",
-          "width":205,
-          "height":115,
-          "fallback":false
-        },
-        {
-          "ratio":"3_1",
-          "url":"https://s1.ticketm.net/dam/v/229/1337cd9a-700d-4c36-96e5-444118ecf229_540991_SOURCE.jpg",
-          "width":1500,
-          "height":500,
-          "fallback":false,
-          "attribution":"KovZpZAEetIA"
-        }],
-        "postalCode":"83725",
-        "timezone":"America/Denver",
-        "city":{"name":"Boise"},
-        "state":{
-          "name":"Idaho",
-          "stateCode":"ID"
-        }
-      }]
-    }
-  }] 
-}; 
+/* eslint-disable*/
+ 
+export const mockEvent = [{"city": "Columbia", "date": "2018-03-10", "name": "Cole Swindell: Reason To Drink Tour w/ Chris Janson & Lauren Alaina", "pic": "https://s1.ticketm.net/dam/a/065/39ebd2bf-0d31-4264-a961-77b6b0b53065_588081_RETINA_PORTRAIT_3_2.jpg", "state": "South Carolina", "ticketUrl": "http://www.ticketmaster.com/colonial-life-arena-tickets-columbia/venue/115599", "time": "19:30:00", "venue": "Colonial Life Arena"}, {"city": "Charlotte", "date": "2018-08-01", "name": "The Adventures of Kesha and Macklemore", "pic": "https://s1.ticketm.net/dam/a/329/74481f36-4c19-44e2-9915-2cfbf574a329_587671_TABLET_LANDSCAPE_16_9.jpg", "state": "North Carolina", "ticketUrl": "http://www.ticketmaster.com/pnc-music-pavilion-tickets-charlotte/venue/114764", "time": "19:00:00", "venue": "PNC Music Pavilion"}, {"city": "Greenville", "date": "2018-04-07", "name": "REO Speedwagon and Styx with special guest Don Felder", "pic": "https://s1.ticketm.net/dam/a/732/453eb05c-0a5e-4f79-b7d1-f5f5363df732_85441_ARTIST_PAGE_3_2.jpg", "state": "South Carolina", "ticketUrl": "http://www.ticketmaster.com/bon-secours-wellness-arena-tickets-greenville/venue/115138", "time": "19:00:00", "venue": "Bon Secours Wellness Arena "}, {"city": "Columbia", "date": "2018-08-15", "name": "Live Nation Presents Journey / Def Leppard", "pic": "https://s1.ticketm.net/dam/a/efc/ea22b620-1f5b-48fe-9506-7029f6136efc_90761_RETINA_PORTRAIT_16_9.jpg", "state": "South Carolina", "ticketUrl": "http://www.ticketmaster.com/colonial-life-arena-tickets-columbia/venue/115599", "time": "19:00:00", "venue": "Colonial Life Arena"}, {"city": "Charlotte", "date": "2018-03-28", "name": "Miguel", "pic": "https://s1.ticketm.net/dam/a/130/fa827b37-b759-44c6-8919-072df20ec130_578371_RECOMENDATION_16_9.jpg", "state": "North Carolina", "ticketUrl": "http://www.ticketmaster.com/the-fillmore-charlotte-tickets-charlotte/venue/115636", "time": "20:00:00", "venue": "The Fillmore Charlotte"}, {"city": "Asheville", "date": "2018-03-08", "name": "Cole Swindell: Reason To Drink Tour w/ Chris Janson & Lauren Alaina", "pic": "https://s1.ticketm.net/dam/a/065/39ebd2bf-0d31-4264-a961-77b6b0b53065_588081_RETINA_PORTRAIT_3_2.jpg", "state": "North Carolina", "ticketUrl": "http://www.ticketmaster.com/us-cellular-center-asheville-tickets-asheville/venue/114961", "time": "19:30:00", "venue": "U.S. Cellular Center Asheville"}, {"city": "Charlotte", "date": "2018-07-29", "name": "Glass Animals", "pic": "https://s1.ticketm.net/dam/a/137/0b676399-3136-469b-add1-33582f0b1137_433781_TABLET_LANDSCAPE_3_2.jpg", "state": "North Carolina", "ticketUrl": "http://www.ticketmaster.com/charlotte-metro-credit-union-amphitheatre-tickets-charlotte/venue/115656", "time": "19:30:00", "venue": "Charlotte Metro Credit Union Amphitheatre"}, {"city": "Greenville", "date": "2018-04-20", "name": "Little Big Town: The Breakers Tour", "pic": "https://s1.ticketm.net/dam/a/1a9/4f8fb6a8-7017-433b-8168-5c3439bd41a9_93471_CUSTOM.jpg", "state": "South Carolina", "ticketUrl": "http://www.ticketmaster.com/bon-secours-wellness-arena-tickets-greenville/venue/115138", "time": "19:30:00", "venue": "Bon Secours Wellness Arena "}, {"city": "Raleigh", "date": "2018-05-09","name": "ODESZA: 2018 A Moment Apart Tour", "pic": "https://s1.ticketm.net/dam/a/837/5a291d70-ee27-48d4-ae52-eaef54d61837_439071_RECOMENDATION_16_9.jpg", "state": "North Carolina", "ticketUrl": "http://www.ticketmaster.com/red-hat-amphitheater-tickets-raleigh/venue/115660", "time": "18:30:00", "venue": "Red Hat Amphitheater"}, {"city": "Charlotte", "date": "2018-06-27", "name": "Thirty Seconds To Mars", "pic": "https://s1.ticketm.net/dam/a/bd2/14a2caca-2ab5-466a-9d20-ed545c0f2bd2_627371_RECOMENDATION_16_9.jpg", "state": "North Carolina", "ticketUrl": "http://www.ticketmaster.com/pnc-music-pavilion-tickets-charlotte/venue/114764", "time": "18:00:00", "venue": "PNC Music Pavilion"}, {"city": "Charlotte", "date": "2018-05-10", "name": "Steely Dan With The Doobie Brothers: The Summer Of Living Dangerously", "pic": "https://s1.ticketm.net/dam/a/79c/d793b408-afe5-4457-96a6-895e5236279c_537271_RETINA_PORTRAIT_16_9.jpg", "state": "North Carolina", "ticketUrl": "http://www.ticketmaster.com/pnc-music-pavilion-tickets-charlotte/venue/114764", "time": "19:30:00", "venue": "PNC Music Pavilion"}, {"city": "North Charleston", "date": "2018-05-15", "name": "James Taylor & His All-Star Band special guest Bonnie Raitt and Band", "pic": "https://s1.ticketm.net/dam/a/494/4a231626-0e28-4f17-b002-71cf03aab494_602141_TABLET_LANDSCAPE_16_9.jpg", "state": "South Carolina", "ticketUrl": "http://www.ticketmaster.com/north-charleston-coliseum-tickets-north-charleston/venue/115120", "time": "19:30:00", "venue": "North Charleston Coliseum"}, {"city": "Charlotte", "date": "2018-09-15", "name": "Alan Jackson: Honky Tonk Highway Tour", "pic": "https://s1.ticketm.net/dam/a/626/5c826af4-fc2f-4a20-8db8-833a53da2626_376331_RETINA_PORTRAIT_3_2.jpg", "state": "North Carolina", "ticketUrl": "http://www.ticketmaster.com/spectrum-center-tickets-charlotte/venue/115405", "time": "19:30:00", "venue": "Spectrum Center "}, {"city": "Columbia", "date": "2018-03-09", "name": "Charlie Wilson", "pic": "https://s1.ticketm.net/dam/a/d5a/23417368-8d8f-46a4-92ea-f685ac45bd5a_264861_RETINA_PORTRAIT_16_9.jpg", "state": "South Carolina", "ticketUrl": "http://www.ticketmaster.com/colonial-life-arena-tickets-columbia/venue/115599", "time": "20:00:00", "venue": "Colonial Life Arena"}, {"city": "Cherokee", "date": "2018-03-17", "name": "A Paranormal Evening With Alice Cooper", "pic": "https://s1.ticketm.net/dam/a/910/f3d432b6-b4fb-46c4-9f10-bada4dbe1910_441781_RECOMENDATION_16_9.jpg", "state": "North Carolina", "ticketUrl": "http://www.ticketmaster.com/harrahs-cherokee-resort-event-center-tickets-cherokee/venue/115665", "time": "20:00:00", "venue": "Harrah's Cherokee Resort Event Center"}, {"city": "Charlotte", "date": "2018-03-11", "name": "Jeezy - The Cold Summer Tour", "pic": "https://s1.ticketm.net/dam/a/224/fde38348-d85c-4601-8832-b50dbee51224_585721_RETINA_PORTRAIT_16_9.jpg", "state": "North Carolina", "ticketUrl": "http://www.ticketmaster.com/the-fillmore-charlotte-tickets-charlotte/venue/115636", "time": "20:00:00", "venue": "The Fillmore Charlotte"}, {"city": "North Myrtle Beach", "date": "2018-03-02", "name": "Scotty McCreery", "pic": "https://s1.ticketm.net/dam/a/9a2/bc4b7575-e042-4944-a686-2b52209079a2_618201_RECOMENDATION_16_9.jpg", "state": "South Carolina", "ticketUrl": "http://www.ticketmaster.com/house-of-blues-myrtle-beach-tickets-north-myrtle-beach/venue/114982", "time": "19:00:00", "venue": "House of Blues Myrtle Beach"},{"city": "Charlotte", "date": "2018-07-25", "name": "Weezer / Pixies", "pic": "https://s1.ticketm.net/dam/a/e8b/d2f5231b-4f84-40fe-bbcc-90faeec3ee8b_556721_EVENT_DETAIL_PAGE_16_9.jpg", "state": "North Carolina", "ticketUrl": "http://www.ticketmaster.com/pnc-music-pavilion-tickets-charlotte/venue/114764", "time": "19:30:00", "venue": "PNC Music Pavilion"}, {"city": "Charlotte", "date": "2018-04-06", "name":"Why Don't We:  The Invitation Tour", "pic": "https://s1.ticketm.net/dam/a/11c/346cf25d-62a6-415f-a2e9-62ccef6e611c_632181_TABLET_LANDSCAPE_LARGE_16_9.jpg", "state": "North Carolina", "ticketUrl": "http://www.ticketmaster.com/the-fillmore-charlotte-tickets-charlotte/venue/115636", "time": "19:00:00", "venue": "The Fillmore Charlotte"}, {"city": "Cherokee", "date": "2018-03-10", "name": "Bret Michaels Rockfest with special guest Firehouse", "pic": "https://s1.ticketm.net/dam/a/e26/90b508fd-228b-4be0-9890-9f8981455e26_97411_RETINA_LANDSCAPE_16_9.jpg", "state": "North Carolina", "ticketUrl": "http://www.ticketmaster.com/harrahs-cherokee-resort-event-center-tickets-cherokee/venue/115665", "time": "19:30:00", "venue": "Harrah's Cherokee Resort Event Center"}];
 
 export const mockArtist = [
   {
@@ -134,3 +26,6 @@ export const mockArtist = [
     "lineup": ["Maroon 5"]
   }
 ];
+
+
+

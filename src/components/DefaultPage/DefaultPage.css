@@ -9,25 +9,26 @@
   display: flex;
   flex-direction: column;
   font-family: Oswald;
+  padding-top: 100px;
   height: 100vh;
 }
 
 .title {
-  color: rgb(105, 105, 105);
+  color: rgb(49, 49, 49);
   display: inline;
   font-size: 65px;
   /* margin: 0 31%; */
 }
 
 .in-the {
-  color: rgb(105, 105, 105); 
+  color: rgb(49, 49, 49); 
   font-weight: 200;
   font-size: 35px; 
 }
 
 .default-page form {
-  top: 270px;
-  left: 22%;
+  top: 310px;
+  left: 21%;
   width: 60%;
 }
 
@@ -39,8 +40,8 @@
 
 .default-page p {
   color: rgb(84, 84, 84);  
-  font-size: 24.5px;
-  margin-top: 120px;
+  font-size: 25px;
+  margin-top:65px;
   width: 100%;
 }
 

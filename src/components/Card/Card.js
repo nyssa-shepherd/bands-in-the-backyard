@@ -7,6 +7,8 @@ const Card = ({
   name, city, state, date, time, venue, type, ticketUrl, image
 }) => {
   let cardtype;
+  let at;
+
   type === 'artist-card' ? cardtype = 'artist-card' : cardtype = 'event-card';
   
   return (
@@ -17,7 +19,7 @@ const Card = ({
       <div className='card-text'>
         <h1 className='artist-name'>{name}</h1>
         <h2 className='location-name'>{city}, {state}</h2>
-        <p>{date} at {time}</p>
+        <p>{date} {time}</p>
         <p>Venue: {venue}</p>
         <p>Get tickets: <a href={ticketUrl}>{ticketUrl}</a></p>
       </div>
