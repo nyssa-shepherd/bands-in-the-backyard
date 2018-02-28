@@ -16,7 +16,7 @@ export const cleanData = async (locationKey) => {
   const events = await fetchEventApi(locationKey);
   const cleanData =  events.map(async event => {
     return await {
-      image: event.images[0].url,
+      pic: event.images[0].url,
       name: event.name,
       city: event._embedded.venues[0].city.name,
       state: event._embedded.venues[0].state.name,

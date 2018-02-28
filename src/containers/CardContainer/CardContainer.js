@@ -8,9 +8,19 @@ import './CardContainer.css';
 export class CardContainer extends Component {
   render () {
     let rendered;
-    
-    this.props.match.path === '/artists' ? 
-      rendered = this.props.artistInLocation.map((artist, i) => {
+    let category;
+    let type;
+    const { match, artistInLocation, events } = this.props;
+
+    if (match.path === '/artists') {
+      category = artistInLocation; 
+      type = 'artist-card';
+    } else {
+      category = events; 
+      type = 'event-card';
+    }
+
+      rendered = category.map((artist, i) => {
         return <Card
           image={artist.pic}
           name={artist.name}
@@ -19,24 +29,24 @@ export class CardContainer extends Component {
           date={artist.date}
           venue={artist.venue}
           ticketUrl={artist.ticketUrl}
-          type='artist-card'
+          type={type}
           key={i}
         />;
       })
-      : rendered = this.props.events.map((event, i) => {
-        return <Card
-          image={event.image} 
-          name={event.name}
-          city={event.city}
-          state={event.state}
-          date={event.date}
-          time={event.time}
-          venue={event.venue}
-          ticketUrl={event.ticketUrl}
-          type='event-card'
-          key={i}
-        />;
-      });
+      // : rendered = this.props.events.map((event, i) => {
+      //   return <Card
+      //     image={event.image} 
+      //     name={event.name}
+      //     city={event.city}
+      //     state={event.state}
+      //     date={event.date}
+      //     time={event.time}
+      //     venue={event.venue}
+      //     ticketUrl={event.ticketUrl}
+      //     type='event-card'
+      //     key={i}
+      //   />;
+      // });
 
     return (  
       <div className='card-container'>
