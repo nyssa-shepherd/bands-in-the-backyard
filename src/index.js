@@ -7,13 +7,17 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers/rootReducer.js';
 import { createStore, applyMiddleware } from 'redux';
+import createSagaMiddleware from 'redux-saga';
 import thunk from 'redux-thunk'
+
+const sagaMiddleware = createSagaMiddleware()
 
 const devTools = (
   window.__REDUX_DEVTOOLS_EXTENSION__ && 
   window.__REDUX_DEVTOOLS_EXTENSION__()
 );
-const store = createStore(rootReducer, devTools, applyMiddleware(thunk));
+
+const store = createStore(rootReducer, devTools, applyMiddleware(sagaMiddleware));
 const router = (
   <BrowserRouter>
     <App />
