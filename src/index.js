@@ -9,6 +9,7 @@ import rootReducer from './reducers/rootReducer.js';
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import thunk from 'redux-thunk'
+import { listenForAddEvents } from './sagas';
 
 const sagaMiddleware = createSagaMiddleware()
 
@@ -23,6 +24,9 @@ const router = (
     <App />
   </BrowserRouter>
 );
+
+sagaMiddleware.run(listenForAddEvents);
+
 
 ReactDOM.render(
   <Provider store={store}>

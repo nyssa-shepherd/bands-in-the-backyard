@@ -6,9 +6,9 @@ import './Search.css';
 import { Trie } from '@rvwatch/completeMe';
 import { 
   setLocation, 
-  fetchApiEvents, 
   fetchArtist, 
-  setArtistInLocation } from '../../actions/actions.js';
+  setArtistInLocation,
+  addEvents } from '../../actions/actions.js';
 import locationObj from '../../locationObject.js';
 
 export class Search extends Component {
@@ -26,12 +26,12 @@ export class Search extends Component {
   }
 
   componentDidMount = async() => {
-    const { fetchApiEvents, setLocation, setArtistInLocation} = this.props;
+    const { addEvents, setLocation, setArtistInLocation} = this.props;
     const location = localStorage.getItem('location');
     const favArtists = localStorage.getItem('favArtists');
     
     localStorage ?
-      await fetchApiEvents(locationObj[location]) && setLocation(location) &&
+      await addEvents(locationObj[location]) && setLocation(location) &&
       await setArtistInLocation(JSON.parse(favArtists)) 
       : null;
   }
@@ -71,10 +71,10 @@ export class Search extends Component {
 
   callFetch = async() => {
     const { inputVal } = this.state;
-    const { location, fetchApiEvents, fetchArtist, match } = this.props;
+    const { location, addEvents, fetchArtist, match } = this.props;
     
     return match.path === '/artists' ?
-      await fetchArtist(inputVal) : await fetchApiEvents(locationObj[location]);
+      await fetchArtist(inputVal) : await addEvents(locationObj[location]);
   }
 
   setLocalStorage = () => {
@@ -131,7 +131,7 @@ export const mapStateToProps = store => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  fetchApiEvents: (locationKey) => dispatch(fetchApiEvents(locationKey)),
+  addEvents: locationKey => dispatch(addEvents(locationKey)),
   setLocation: location => dispatch(setLocation(location)),
   fetchArtist: artistName => dispatch(fetchArtist(artistName)),
   setArtistInLocation: artist => dispatch(setArtistInLocation(artist))
@@ -144,7 +144,6 @@ Search.propTypes = {
   allArtistEvents: PropTypes.array,
   artistInLocation: PropTypes.array,
   setLocation: PropTypes.func,
-  fetchApiEvents: PropTypes.func,
   fetchArtist: PropTypes.func,
   setArtistInLocation: PropTypes.func,
   match: PropTypes.object

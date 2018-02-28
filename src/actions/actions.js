@@ -1,9 +1,9 @@
 import { cleanData, cleanArtistData } from '../components/apiCall/apiCall.js';
 
-export const fetchApiEvents = (locationKey) => async (dispatch) => {
-  const events = await cleanData(locationKey);
-  return dispatch(addEvents(events));
-};
+// export const fetchApiEvents = (locationKey) => async (dispatch) => {
+//   const events = await cleanData(locationKey);
+//   return dispatch(addEvents(events));
+// };
 
 export const addEvents = events => ({
   type: 'ADD_EVENTS',
