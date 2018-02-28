@@ -101,6 +101,7 @@ export class Search extends Component {
               onChange={(e) => this.inputHandler(e)} 
               type='text'
               placeholder='Enter a location'
+              list='suggestions'
               value={inputVal}
             />
             <button>search</button>

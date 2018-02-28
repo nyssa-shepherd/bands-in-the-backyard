@@ -1,4 +1,16 @@
 import * as actions from './actions.js';
+import {fetchApiEvents} from './actions.js';
+import {thunkMockEvent} from '../mockData.js';
+
+describe('fetchApiEvents', () => {
+
+  it('dispatch an addEvents action', async() => {
+    const dispatch = jest.fn();
+    await fetchApiEvents(234)(dispatch);
+    expect(dispatch).toHaveBeenCalledWith(actions.addEvents(thunkMockEvent));
+  });
+
+});
 
 describe('addEvents', () => {
 

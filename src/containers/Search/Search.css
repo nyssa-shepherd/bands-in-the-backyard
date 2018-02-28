@@ -37,16 +37,11 @@ input::placeholder {
   font-size: 18px;
 }
 
-#suggestions {
-  background-color: rgba(255, 255, 255, 0.319);
-}
-
-datalist {
+input::list {
   border-radius: 5px;
+  background-color: orange;
   display: block;
-}
-
-option {
   color: rgb(47, 47, 47);
   font-size: 24px;
 }
+
