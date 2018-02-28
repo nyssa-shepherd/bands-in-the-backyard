@@ -4,9 +4,12 @@ To get the APP up and running, clone down the repo and npm install.
 
 
 
-![alt text](./img3.png)
+
+![alt text](./landing.png)
+
 
 ![alt text](./img1.png)
+
 
 ![alt text](./img2.png)
 
