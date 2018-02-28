@@ -1,13 +1,13 @@
 import * as actions from './actions.js';
 import {fetchApiEvents} from './actions.js';
-import {thunkMockEvent} from '../mockData.js';
+import {mockEvent, mockArtist} from '../mockData.js';
 
 describe('fetchApiEvents', () => {
 
   it('dispatch an addEvents action', async() => {
     const dispatch = jest.fn();
-    await fetchApiEvents(234)(dispatch);
-    expect(dispatch).toHaveBeenCalledWith(actions.addEvents(thunkMockEvent));
+    await fetchApiEvents(256)(dispatch);
+    expect(dispatch).toHaveBeenCalledWith(actions.addEvents(mockEvent));
   });
 
 });
@@ -36,6 +36,14 @@ describe('setLocation', () => {
     expect(expected).toEqual(actions.setLocation(location));
   });
 
+});
+
+describe('fetchArtist', () => {
+  it('dispatch an addArtists action', async() => {
+    const dispatch = jest.fn();
+    await actions.fetchArtist('maroon5')(dispatch);
+    expect(dispatch).toHaveBeenCalledWith(actions.addArtist(mockArtist));
+  });
 });
 
 describe('addArtist', () => {
