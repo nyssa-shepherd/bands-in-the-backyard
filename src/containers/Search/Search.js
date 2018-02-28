@@ -16,7 +16,6 @@ export class Search extends Component {
     super();
     this.state = {
       inputVal: '',
-      favArtists: [],
       suggestedWords: [],
       redirect: false
     };
