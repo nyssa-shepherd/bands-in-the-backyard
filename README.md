@@ -13,7 +13,7 @@ This project uses React in order to display upcoming concerts near the user. The
 
 1. Clone down repo
 2. `npm install`
-3. In order to access data from the Ticket Master API, you will need to request an API key from Ticket Master and place it in    a file called `src/components/apiCall/apiKey.js.`
+3. In order to access data from the Ticket Master API, you will need to request an API key from Ticket Master and place it in    a file called `src/components/apiCall/apiKey.js`
 4. To start the server: `npm start`
 5. To run tests: `npm test`
 
