@@ -19,7 +19,7 @@ This project uses React in order to display upcoming concerts near the user. The
 
 
 
-
+## Screen Shots:
 
 ![alt text](./landing.png)
 
